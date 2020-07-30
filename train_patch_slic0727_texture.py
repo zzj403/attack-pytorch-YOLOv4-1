@@ -415,6 +415,7 @@ class PatchTrainer(object):
 
 
             for step in range(unique_segments_num):
+                # it run too slow
 
 
 
