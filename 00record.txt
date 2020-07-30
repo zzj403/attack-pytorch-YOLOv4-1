@@ -1,0 +1,3599 @@
+/home/user/anaconda3/envs/mmd37_1/bin/python /disk2/mycode/0511models/pytorch-YOLOv4-master-unofficial/a_yolo_json.py
+convalution havn't activate linear
+convalution havn't activate linear
+convalution havn't activate linear
+-----------------
+Now testing 1013.png
+bb score is 0.0
+zero_num: 1
+-----------------
+Now testing 1016.png
+bb score is 0.0
+zero_num: 2
+-----------------
+Now testing 1027.png
+bb score is 0.5
+-----------------
+Now testing 104.png
+bb score is 1.0
+-----------------
+Now testing 1041.png
+bb score is 0.5
+-----------------
+Now testing 1043.png
+bb score is 0.0
+zero_num: 3
+-----------------
+Now testing 1056.png
+bb score is 0.0
+zero_num: 4
+-----------------
+Now testing 1058.png
+bb score is 0.0
+zero_num: 5
+-----------------
+Now testing 1060.png
+bb score is 1.0
+-----------------
+Now testing 1067.png
+bb score is 0.0
+zero_num: 6
+-----------------
+Now testing 1069.png
+bb score is 0.0
+zero_num: 7
+-----------------
+Now testing 107.png
+bb score is 0.0
+zero_num: 8
+-----------------
+Now testing 1074.png
+bb score is 0.0
+zero_num: 9
+-----------------
+Now testing 1076.png
+bb score is 1.0
+-----------------
+Now testing 1080.png
+bb score is 0.0
+zero_num: 10
+-----------------
+Now testing 1084.png
+bb score is 0.5
+-----------------
+Now testing 1116.png
+bb score is 0.0
+zero_num: 11
+-----------------
+Now testing 1121.png
+bb score is 0.0
+zero_num: 12
+-----------------
+Now testing 1125.png
+bb score is 0.0
+zero_num: 13
+-----------------
+Now testing 1128.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 1129.png
+bb score is 0.5
+-----------------
+Now testing 1130.png
+bb score is 0.0
+zero_num: 14
+-----------------
+Now testing 1132.png
+bb score is 1.0
+-----------------
+Now testing 1133.png
+bb score is 0.25
+-----------------
+Now testing 1134.png
+bb score is 0.0
+zero_num: 15
+-----------------
+Now testing 1138.png
+bb score is 1.0
+-----------------
+Now testing 1140.png
+bb score is 0.0
+zero_num: 16
+-----------------
+Now testing 1142.png
+bb score is 0.0
+zero_num: 17
+-----------------
+Now testing 1143.png
+bb score is 0.5
+-----------------
+Now testing 1145.png
+bb score is 1.0
+-----------------
+Now testing 1149.png
+bb score is 0.0
+zero_num: 18
+-----------------
+Now testing 1154.png
+bb score is 0.0
+zero_num: 19
+-----------------
+Now testing 1156.png
+bb score is 0.0
+zero_num: 20
+-----------------
+Now testing 1163.png
+bb score is 0.5
+-----------------
+Now testing 1164.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 1165.png
+bb score is 0.0
+zero_num: 21
+-----------------
+Now testing 1166.png
+bb score is 1.0
+-----------------
+Now testing 1169.png
+bb score is 0.0
+zero_num: 22
+-----------------
+Now testing 1171.png
+bb score is 0.0
+zero_num: 23
+-----------------
+Now testing 1174.png
+bb score is 1.0
+-----------------
+Now testing 1175.png
+bb score is 1.0
+-----------------
+Now testing 1178.png
+bb score is 0.0
+zero_num: 24
+-----------------
+Now testing 1179.png
+bb score is 0.5
+-----------------
+Now testing 118.png
+bb score is 0.0
+zero_num: 25
+-----------------
+Now testing 1183.png
+bb score is 0.0
+zero_num: 26
+-----------------
+Now testing 1196.png
+bb score is 0.0
+zero_num: 27
+-----------------
+Now testing 1198.png
+bb score is 0.0
+zero_num: 28
+-----------------
+Now testing 1199.png
+bb score is 0.0
+zero_num: 29
+-----------------
+Now testing 1200.png
+bb score is 0.0
+zero_num: 30
+-----------------
+Now testing 1201.png
+bb score is 0.0
+zero_num: 31
+-----------------
+Now testing 1203.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 1204.png
+bb score is 0.0
+zero_num: 32
+-----------------
+Now testing 1205.png
+bb score is 0.0
+zero_num: 33
+-----------------
+Now testing 1206.png
+bb score is 0.5
+-----------------
+Now testing 1207.png
+bb score is 0.8
+-----------------
+Now testing 1210.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 1212.png
+bb score is 0.5
+-----------------
+Now testing 1213.png
+bb score is 0.0
+zero_num: 34
+-----------------
+Now testing 1214.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 1223.png
+bb score is 0.5
+-----------------
+Now testing 1226.png
+bb score is 0.0
+zero_num: 35
+-----------------
+Now testing 1227.png
+bb score is 0.0
+zero_num: 36
+-----------------
+Now testing 1230.png
+bb score is 0.5
+-----------------
+Now testing 1233.png
+bb score is 0.0
+zero_num: 37
+-----------------
+Now testing 1234.png
+bb score is 0.0
+zero_num: 38
+-----------------
+Now testing 1235.png
+bb score is 0.0
+zero_num: 39
+-----------------
+Now testing 1236.png
+bb score is 0.0
+zero_num: 40
+-----------------
+Now testing 1238.png
+bb score is 1.0
+-----------------
+Now testing 1240.png
+bb score is 0.5
+-----------------
+Now testing 1242.png
+bb score is 0.5
+-----------------
+Now testing 1250.png
+bb score is 0.0
+zero_num: 41
+-----------------
+Now testing 1251.png
+bb score is 0.0
+zero_num: 42
+-----------------
+Now testing 1254.png
+bb score is 0.0
+zero_num: 43
+-----------------
+Now testing 1263.png
+bb score is 0.0
+zero_num: 44
+-----------------
+Now testing 1266.png
+bb score is 0.0
+zero_num: 45
+-----------------
+Now testing 1271.png
+bb score is 0.0
+zero_num: 46
+-----------------
+Now testing 1272.png
+bb score is 0.0
+zero_num: 47
+-----------------
+Now testing 1273.png
+bb score is 0.5
+-----------------
+Now testing 1274.png
+bb score is 0.0
+zero_num: 48
+-----------------
+Now testing 1275.png
+bb score is 1.0
+-----------------
+Now testing 1276.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 1277.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 1279.png
+bb score is 0.0
+zero_num: 49
+-----------------
+Now testing 1280.png
+bb score is 0.0
+zero_num: 50
+-----------------
+Now testing 1283.png
+bb score is 0.0
+zero_num: 51
+-----------------
+Now testing 1284.png
+bb score is 0.0
+zero_num: 52
+-----------------
+Now testing 1285.png
+bb score is 0.0
+zero_num: 53
+-----------------
+Now testing 1291.png
+bb score is 0.0
+zero_num: 54
+-----------------
+Now testing 1294.png
+bb score is 0.0
+zero_num: 55
+-----------------
+Now testing 1295.png
+bb score is 0.6666666666666667
+-----------------
+Now testing 1297.png
+bb score is 1.0
+-----------------
+Now testing 1298.png
+bb score is 0.5
+-----------------
+Now testing 1299.png
+bb score is 0.5
+-----------------
+Now testing 130.png
+bb score is 0.0
+zero_num: 56
+-----------------
+Now testing 1300.png
+bb score is 0.0
+zero_num: 57
+-----------------
+Now testing 1301.png
+bb score is 0.0
+zero_num: 58
+-----------------
+Now testing 1302.png
+bb score is 1.0
+-----------------
+Now testing 1306.png
+bb score is 0.25
+-----------------
+Now testing 1308.png
+bb score is 1.0
+-----------------
+Now testing 1309.png
+bb score is 0.0
+zero_num: 59
+-----------------
+Now testing 1310.png
+bb score is 0.0
+zero_num: 60
+-----------------
+Now testing 1311.png
+bb score is 1.0
+-----------------
+Now testing 1313.png
+bb score is 1.0
+-----------------
+Now testing 1314.png
+bb score is 0.0
+zero_num: 61
+-----------------
+Now testing 1317.png
+bb score is 0.75
+-----------------
+Now testing 1318.png
+bb score is 0.0
+zero_num: 62
+-----------------
+Now testing 1323.png
+bb score is 1.0
+-----------------
+Now testing 1324.png
+bb score is 0.0
+zero_num: 63
+-----------------
+Now testing 1325.png
+bb score is 0.0
+zero_num: 64
+-----------------
+Now testing 1327.png
+bb score is 0.0
+zero_num: 65
+-----------------
+Now testing 1329.png
+bb score is 0.0
+zero_num: 66
+-----------------
+Now testing 1330.png
+bb score is 0.0
+zero_num: 67
+-----------------
+Now testing 1333.png
+bb score is 0.0
+zero_num: 68
+-----------------
+Now testing 1335.png
+bb score is 0.0
+zero_num: 69
+-----------------
+Now testing 1336.png
+bb score is 0.0
+zero_num: 70
+-----------------
+Now testing 1337.png
+bb score is 0.0
+zero_num: 71
+-----------------
+Now testing 1339.png
+bb score is 0.0
+zero_num: 72
+-----------------
+Now testing 134.png
+bb score is 0.0
+zero_num: 73
+-----------------
+Now testing 1345.png
+bb score is 0.0
+zero_num: 74
+-----------------
+Now testing 1346.png
+bb score is 0.0
+zero_num: 75
+-----------------
+Now testing 1351.png
+bb score is 0.0
+zero_num: 76
+-----------------
+Now testing 1361.png
+bb score is 0.0
+zero_num: 77
+-----------------
+Now testing 1364.png
+bb score is 0.0
+zero_num: 78
+-----------------
+Now testing 1365.png
+bb score is 0.0
+zero_num: 79
+-----------------
+Now testing 1368.png
+bb score is 0.0
+zero_num: 80
+-----------------
+Now testing 1370.png
+bb score is 0.0
+zero_num: 81
+-----------------
+Now testing 1381.png
+bb score is 1.0
+-----------------
+Now testing 1385.png
+bb score is 1.0
+-----------------
+Now testing 139.png
+bb score is 0.0
+zero_num: 82
+-----------------
+Now testing 1391.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 1393.png
+bb score is 0.5
+-----------------
+Now testing 1394.png
+bb score is 0.0
+zero_num: 83
+-----------------
+Now testing 1395.png
+bb score is 0.0
+zero_num: 84
+-----------------
+Now testing 1399.png
+bb score is 0.0
+zero_num: 85
+-----------------
+Now testing 14.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 1400.png
+bb score is 0.25
+-----------------
+Now testing 1405.png
+bb score is 0.0
+zero_num: 86
+-----------------
+Now testing 1410.png
+bb score is 0.0
+zero_num: 87
+-----------------
+Now testing 1412.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 1413.png
+bb score is 0.0
+zero_num: 88
+-----------------
+Now testing 1418.png
+bb score is 0.0
+zero_num: 89
+-----------------
+Now testing 1419.png
+bb score is 0.25
+-----------------
+Now testing 1429.png
+bb score is 0.5
+-----------------
+Now testing 1436.png
+bb score is 0.0
+zero_num: 90
+-----------------
+Now testing 1438.png
+bb score is 0.0
+zero_num: 91
+-----------------
+Now testing 144.png
+bb score is 0.0
+zero_num: 92
+-----------------
+Now testing 1444.png
+bb score is 0.25
+-----------------
+Now testing 145.png
+bb score is 0.0
+zero_num: 93
+-----------------
+Now testing 1456.png
+bb score is 0.0
+zero_num: 94
+-----------------
+Now testing 1458.png
+bb score is 0.0
+zero_num: 95
+-----------------
+Now testing 1462.png
+bb score is 0.0
+zero_num: 96
+-----------------
+Now testing 1464.png
+bb score is 0.5
+-----------------
+Now testing 1465.png
+bb score is 0.0
+zero_num: 97
+-----------------
+Now testing 1470.png
+bb score is 0.0
+zero_num: 98
+-----------------
+Now testing 1492.png
+bb score is 0.0
+zero_num: 99
+-----------------
+Now testing 1493.png
+bb score is 0.0
+zero_num: 100
+-----------------
+Now testing 15.png
+bb score is 0.0
+zero_num: 101
+-----------------
+Now testing 150.png
+bb score is 1.0
+-----------------
+Now testing 1501.png
+bb score is 0.0
+zero_num: 102
+-----------------
+Now testing 1504.png
+bb score is 0.0
+zero_num: 103
+-----------------
+Now testing 1515.png
+bb score is 0.5
+-----------------
+Now testing 1517.png
+bb score is 1.0
+-----------------
+Now testing 1526.png
+bb score is 0.5
+-----------------
+Now testing 1535.png
+bb score is 1.0
+-----------------
+Now testing 1536.png
+bb score is 1.0
+-----------------
+Now testing 1543.png
+bb score is 0.0
+zero_num: 104
+-----------------
+Now testing 1557.png
+bb score is 0.4285714285714286
+-----------------
+Now testing 1559.png
+bb score is 0.0
+zero_num: 105
+-----------------
+Now testing 1564.png
+bb score is 0.0
+zero_num: 106
+-----------------
+Now testing 1567.png
+bb score is 0.0
+zero_num: 107
+-----------------
+Now testing 1574.png
+bb score is 1.0
+-----------------
+Now testing 1575.png
+bb score is 1.0
+-----------------
+Now testing 1577.png
+bb score is 0.5
+-----------------
+Now testing 1583.png
+bb score is 1.0
+-----------------
+Now testing 1584.png
+bb score is 0.6666666666666667
+-----------------
+Now testing 1591.png
+bb score is 0.0
+zero_num: 108
+-----------------
+Now testing 1600.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 1602.png
+bb score is 0.5
+-----------------
+Now testing 1607.png
+bb score is 0.0
+zero_num: 109
+-----------------
+Now testing 1611.png
+bb score is 1.0
+-----------------
+Now testing 1612.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 1619.png
+bb score is 0.5
+-----------------
+Now testing 164.png
+bb score is 1.0
+-----------------
+Now testing 1652.png
+bb score is 0.5
+-----------------
+Now testing 1656.png
+bb score is 0.0
+zero_num: 110
+-----------------
+Now testing 1661.png
+bb score is 0.6666666666666667
+-----------------
+Now testing 1663.png
+bb score is 0.0
+zero_num: 111
+-----------------
+Now testing 1665.png
+bb score is 0.0
+zero_num: 112
+-----------------
+Now testing 1667.png
+bb score is 1.0
+-----------------
+Now testing 167.png
+bb score is 0.0
+zero_num: 113
+-----------------
+Now testing 1673.png
+bb score is 1.0
+-----------------
+Now testing 1674.png
+bb score is 1.0
+-----------------
+Now testing 1676.png
+bb score is 0.0
+zero_num: 114
+-----------------
+Now testing 1682.png
+bb score is 0.0
+zero_num: 115
+-----------------
+Now testing 1686.png
+bb score is 0.0
+zero_num: 116
+-----------------
+Now testing 1687.png
+bb score is 0.5
+-----------------
+Now testing 1689.png
+bb score is 0.0
+zero_num: 117
+-----------------
+Now testing 1692.png
+bb score is 0.0
+zero_num: 118
+-----------------
+Now testing 1696.png
+bb score is 0.0
+zero_num: 119
+-----------------
+Now testing 1702.png
+bb score is 1.0
+-----------------
+Now testing 1714.png
+bb score is 0.5
+-----------------
+Now testing 172.png
+bb score is 0.0
+zero_num: 120
+-----------------
+Now testing 1720.png
+bb score is 0.0
+zero_num: 121
+-----------------
+Now testing 1721.png
+bb score is 0.0
+zero_num: 122
+-----------------
+Now testing 1724.png
+bb score is 0.0
+zero_num: 123
+-----------------
+Now testing 1726.png
+bb score is 0.0
+zero_num: 124
+-----------------
+Now testing 1736.png
+bb score is 1.0
+-----------------
+Now testing 1737.png
+bb score is 0.6666666666666667
+-----------------
+Now testing 1739.png
+bb score is 0.0
+zero_num: 125
+-----------------
+Now testing 175.png
+bb score is 0.6666666666666667
+-----------------
+Now testing 1750.png
+bb score is 0.5
+-----------------
+Now testing 1756.png
+bb score is 1.0
+-----------------
+Now testing 1758.png
+bb score is 0.0
+zero_num: 126
+-----------------
+Now testing 1761.png
+bb score is 0.0
+zero_num: 127
+-----------------
+Now testing 1767.png
+bb score is 1.0
+-----------------
+Now testing 1775.png
+bb score is 0.0
+zero_num: 128
+-----------------
+Now testing 1784.png
+bb score is 0.0
+zero_num: 129
+-----------------
+Now testing 1812.png
+bb score is 0.0
+zero_num: 130
+-----------------
+Now testing 1820.png
+bb score is 0.0
+zero_num: 131
+-----------------
+Now testing 1825.png
+bb score is 0.0
+zero_num: 132
+-----------------
+Now testing 1832.png
+bb score is 0.0
+zero_num: 133
+-----------------
+Now testing 1836.png
+bb score is 0.5
+-----------------
+Now testing 1844.png
+bb score is 0.0
+zero_num: 134
+-----------------
+Now testing 1853.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 1856.png
+bb score is 1.0
+-----------------
+Now testing 1857.png
+bb score is 0.0
+zero_num: 135
+-----------------
+Now testing 1858.png
+bb score is 0.0
+zero_num: 136
+-----------------
+Now testing 1861.png
+bb score is 0.5
+-----------------
+Now testing 1863.png
+bb score is 0.0
+zero_num: 137
+-----------------
+Now testing 1865.png
+bb score is 0.0
+zero_num: 138
+-----------------
+Now testing 1867.png
+bb score is 1.0
+-----------------
+Now testing 187.png
+bb score is 0.5
+-----------------
+Now testing 1875.png
+bb score is 0.5
+-----------------
+Now testing 188.png
+bb score is 0.0
+zero_num: 139
+-----------------
+Now testing 1885.png
+bb score is 1.0
+-----------------
+Now testing 1886.png
+bb score is 1.0
+-----------------
+Now testing 1887.png
+bb score is 0.0
+zero_num: 140
+-----------------
+Now testing 1889.png
+bb score is 0.0
+zero_num: 141
+-----------------
+Now testing 1892.png
+bb score is 0.5
+-----------------
+Now testing 1899.png
+bb score is 0.5
+-----------------
+Now testing 190.png
+bb score is 0.0
+zero_num: 142
+-----------------
+Now testing 1900.png
+bb score is 0.0
+zero_num: 143
+-----------------
+Now testing 1901.png
+bb score is 1.0
+-----------------
+Now testing 1902.png
+bb score is 0.0
+zero_num: 144
+-----------------
+Now testing 1904.png
+bb score is 0.6666666666666667
+-----------------
+Now testing 1912.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 1914.png
+bb score is 0.0
+zero_num: 145
+-----------------
+Now testing 1920.png
+bb score is 0.0
+zero_num: 146
+-----------------
+Now testing 1939.png
+bb score is 0.5
+-----------------
+Now testing 1942.png
+bb score is 0.5
+-----------------
+Now testing 1944.png
+bb score is 0.0
+zero_num: 147
+-----------------
+Now testing 1946.png
+bb score is 0.16666666666666663
+-----------------
+Now testing 1980.png
+bb score is 0.0
+zero_num: 148
+-----------------
+Now testing 1981.png
+bb score is 0.0
+zero_num: 149
+-----------------
+Now testing 1982.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 199.png
+bb score is 1.0
+-----------------
+Now testing 1995.png
+bb score is 0.0
+zero_num: 150
+-----------------
+Now testing 1996.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 2008.png
+bb score is 0.5
+-----------------
+Now testing 2011.png
+bb score is 0.0
+zero_num: 151
+-----------------
+Now testing 2015.png
+bb score is 0.0
+zero_num: 152
+-----------------
+Now testing 2017.png
+bb score is 0.5
+-----------------
+Now testing 2023.png
+bb score is 0.0
+zero_num: 153
+-----------------
+Now testing 2051.png
+bb score is 1.0
+-----------------
+Now testing 2055.png
+bb score is 0.0
+zero_num: 154
+-----------------
+Now testing 2056.png
+bb score is 0.0
+zero_num: 155
+-----------------
+Now testing 2058.png
+bb score is 0.0
+zero_num: 156
+-----------------
+Now testing 2073.png
+bb score is 1.0
+-----------------
+Now testing 2075.png
+bb score is 1.0
+-----------------
+Now testing 2077.png
+bb score is 0.0
+zero_num: 157
+-----------------
+Now testing 2086.png
+bb score is 0.0
+zero_num: 158
+-----------------
+Now testing 2088.png
+bb score is 0.0
+zero_num: 159
+-----------------
+Now testing 2093.png
+bb score is 0.0
+zero_num: 160
+-----------------
+Now testing 2094.png
+bb score is 0.5
+-----------------
+Now testing 2100.png
+bb score is 1.0
+-----------------
+Now testing 2101.png
+bb score is 1.0
+-----------------
+Now testing 2107.png
+bb score is 0.0
+zero_num: 161
+-----------------
+Now testing 2114.png
+bb score is 1.0
+-----------------
+Now testing 213.png
+bb score is 0.5
+-----------------
+Now testing 2135.png
+bb score is 0.19999999999999996
+-----------------
+Now testing 2136.png
+bb score is 0.0
+zero_num: 162
+-----------------
+Now testing 214.png
+bb score is 0.0
+zero_num: 163
+-----------------
+Now testing 2150.png
+bb score is 0.0
+zero_num: 164
+-----------------
+Now testing 2156.png
+bb score is 0.0
+zero_num: 165
+-----------------
+Now testing 2175.png
+bb score is 0.0
+zero_num: 166
+-----------------
+Now testing 2178.png
+bb score is 1.0
+-----------------
+Now testing 218.png
+bb score is 0.0
+zero_num: 167
+-----------------
+Now testing 219.png
+bb score is 1.0
+-----------------
+Now testing 2206.png
+bb score is 0.0
+zero_num: 168
+-----------------
+Now testing 2214.png
+bb score is 1.0
+-----------------
+Now testing 2216.png
+bb score is 0.0
+zero_num: 169
+-----------------
+Now testing 2217.png
+bb score is 0.6666666666666667
+-----------------
+Now testing 2227.png
+bb score is 0.0
+zero_num: 170
+-----------------
+Now testing 2228.png
+bb score is 1.0
+-----------------
+Now testing 2229.png
+bb score is 0.0
+zero_num: 171
+-----------------
+Now testing 2235.png
+bb score is 0.0
+zero_num: 172
+-----------------
+Now testing 2244.png
+bb score is 0.0
+zero_num: 173
+-----------------
+Now testing 2247.png
+bb score is 0.0
+zero_num: 174
+-----------------
+Now testing 2251.png
+bb score is 0.5
+-----------------
+Now testing 2253.png
+bb score is 0.0
+zero_num: 175
+-----------------
+Now testing 2256.png
+bb score is 1.0
+-----------------
+Now testing 2268.png
+bb score is 0.0
+zero_num: 176
+-----------------
+Now testing 2270.png
+bb score is 0.5
+-----------------
+Now testing 2272.png
+bb score is 0.25
+-----------------
+Now testing 2280.png
+bb score is 1.0
+-----------------
+Now testing 2284.png
+bb score is 0.5
+-----------------
+Now testing 2291.png
+bb score is 0.0
+zero_num: 177
+-----------------
+Now testing 2295.png
+bb score is 0.0
+zero_num: 178
+-----------------
+Now testing 230.png
+bb score is 1.0
+-----------------
+Now testing 2300.png
+bb score is 0.6666666666666667
+-----------------
+Now testing 2316.png
+bb score is 0.0
+zero_num: 179
+-----------------
+Now testing 232.png
+bb score is 0.0
+zero_num: 180
+-----------------
+Now testing 2320.png
+bb score is 1.0
+-----------------
+Now testing 2323.png
+bb score is 0.0
+zero_num: 181
+-----------------
+Now testing 2332.png
+bb score is 0.0
+zero_num: 182
+-----------------
+Now testing 2336.png
+bb score is 0.0
+zero_num: 183
+-----------------
+Now testing 2338.png
+bb score is 0.0
+zero_num: 184
+-----------------
+Now testing 2341.png
+bb score is 0.0
+zero_num: 185
+-----------------
+Now testing 2343.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 2345.png
+bb score is 1.0
+-----------------
+Now testing 2352.png
+bb score is 0.5
+-----------------
+Now testing 2353.png
+bb score is 0.0
+zero_num: 186
+-----------------
+Now testing 2356.png
+bb score is 0.5
+-----------------
+Now testing 2358.png
+bb score is 0.0
+zero_num: 187
+-----------------
+Now testing 2359.png
+bb score is 0.5
+-----------------
+Now testing 2360.png
+bb score is 0.25
+-----------------
+Now testing 2366.png
+bb score is 0.6666666666666667
+-----------------
+Now testing 2367.png
+bb score is 0.0
+zero_num: 188
+-----------------
+Now testing 2378.png
+bb score is 0.16666666666666663
+-----------------
+Now testing 2386.png
+bb score is 0.0
+zero_num: 189
+-----------------
+Now testing 2387.png
+bb score is 0.0
+zero_num: 190
+-----------------
+Now testing 2388.png
+bb score is 0.5
+-----------------
+Now testing 2402.png
+bb score is 1.0
+-----------------
+Now testing 2403.png
+bb score is 0.0
+zero_num: 191
+-----------------
+Now testing 2406.png
+bb score is 0.5
+-----------------
+Now testing 242.png
+bb score is 0.0
+zero_num: 192
+-----------------
+Now testing 2424.png
+bb score is 0.0
+zero_num: 193
+-----------------
+Now testing 2436.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 2437.png
+bb score is 0.0
+zero_num: 194
+-----------------
+Now testing 245.png
+bb score is 0.0
+zero_num: 195
+-----------------
+Now testing 2450.png
+bb score is 0.0
+zero_num: 196
+-----------------
+Now testing 2453.png
+bb score is 0.0
+zero_num: 197
+-----------------
+Now testing 2456.png
+bb score is 0.5
+-----------------
+Now testing 2457.png
+bb score is 0.0
+zero_num: 198
+-----------------
+Now testing 2459.png
+bb score is 1.0
+-----------------
+Now testing 2476.png
+bb score is 0.0
+zero_num: 199
+-----------------
+Now testing 2479.png
+bb score is 0.0
+zero_num: 200
+-----------------
+Now testing 248.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 2482.png
+bb score is 0.0
+zero_num: 201
+-----------------
+Now testing 2483.png
+bb score is 0.0
+zero_num: 202
+-----------------
+Now testing 2485.png
+bb score is 0.0
+zero_num: 203
+-----------------
+Now testing 2488.png
+bb score is 0.0
+zero_num: 204
+-----------------
+Now testing 2489.png
+bb score is 0.0
+zero_num: 205
+-----------------
+Now testing 249.png
+bb score is 1.0
+-----------------
+Now testing 2493.png
+bb score is 1.0
+-----------------
+Now testing 2495.png
+bb score is 0.0
+zero_num: 206
+-----------------
+Now testing 250.png
+bb score is 0.0
+zero_num: 207
+-----------------
+Now testing 252.png
+bb score is 0.25
+-----------------
+Now testing 2520.png
+bb score is 0.5
+-----------------
+Now testing 2522.png
+bb score is 0.5
+-----------------
+Now testing 2524.png
+bb score is 0.5
+-----------------
+Now testing 2531.png
+bb score is 0.0
+zero_num: 208
+-----------------
+Now testing 2532.png
+bb score is 0.0
+zero_num: 209
+-----------------
+Now testing 2534.png
+bb score is 0.0
+zero_num: 210
+-----------------
+Now testing 2538.png
+bb score is 0.0
+zero_num: 211
+-----------------
+Now testing 2541.png
+bb score is 0.0
+zero_num: 212
+-----------------
+Now testing 2545.png
+bb score is 0.0
+zero_num: 213
+-----------------
+Now testing 2546.png
+bb score is 0.6666666666666667
+-----------------
+Now testing 2548.png
+bb score is 0.0
+zero_num: 214
+-----------------
+Now testing 2549.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 255.png
+bb score is 1.0
+-----------------
+Now testing 2555.png
+bb score is 0.5
+-----------------
+Now testing 256.png
+bb score is 0.0
+zero_num: 215
+-----------------
+Now testing 2569.png
+bb score is 0.0
+zero_num: 216
+-----------------
+Now testing 257.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 2573.png
+bb score is 0.0
+zero_num: 217
+-----------------
+Now testing 2575.png
+bb score is 0.0
+zero_num: 218
+-----------------
+Now testing 2583.png
+bb score is 0.0
+zero_num: 219
+-----------------
+Now testing 2590.png
+bb score is 0.0
+zero_num: 220
+-----------------
+Now testing 2593.png
+bb score is 0.5
+-----------------
+Now testing 2601.png
+bb score is 0.0
+zero_num: 221
+-----------------
+Now testing 2609.png
+bb score is 1.0
+-----------------
+Now testing 2615.png
+bb score is 0.0
+zero_num: 222
+-----------------
+Now testing 2617.png
+bb score is 0.0
+zero_num: 223
+-----------------
+Now testing 2621.png
+bb score is 0.5
+-----------------
+Now testing 2622.png
+bb score is 0.0
+zero_num: 224
+-----------------
+Now testing 2627.png
+bb score is 0.0
+zero_num: 225
+-----------------
+Now testing 2629.png
+bb score is 0.0
+zero_num: 226
+-----------------
+Now testing 263.png
+bb score is 1.0
+-----------------
+Now testing 2635.png
+bb score is 0.5
+-----------------
+Now testing 2639.png
+bb score is 0.0
+zero_num: 227
+-----------------
+Now testing 2643.png
+bb score is 0.0
+zero_num: 228
+-----------------
+Now testing 2644.png
+bb score is 0.5
+-----------------
+Now testing 2646.png
+bb score is 0.4
+-----------------
+Now testing 2650.png
+bb score is 0.0
+zero_num: 229
+-----------------
+Now testing 2658.png
+bb score is 0.0
+zero_num: 230
+-----------------
+Now testing 2663.png
+bb score is 0.0
+zero_num: 231
+-----------------
+Now testing 2664.png
+bb score is 0.0
+zero_num: 232
+-----------------
+Now testing 2669.png
+bb score is 0.6666666666666667
+-----------------
+Now testing 2672.png
+bb score is 0.5
+-----------------
+Now testing 2676.png
+bb score is 0.0
+zero_num: 233
+-----------------
+Now testing 2685.png
+bb score is 0.0
+zero_num: 234
+-----------------
+Now testing 2686.png
+bb score is 0.0
+zero_num: 235
+-----------------
+Now testing 2688.png
+bb score is 0.0
+zero_num: 236
+-----------------
+Now testing 269.png
+bb score is 0.5
+-----------------
+Now testing 2690.png
+bb score is 0.0
+zero_num: 237
+-----------------
+Now testing 2691.png
+bb score is 0.0
+zero_num: 238
+-----------------
+Now testing 2693.png
+bb score is 0.5
+-----------------
+Now testing 2694.png
+bb score is 0.0
+zero_num: 239
+-----------------
+Now testing 2696.png
+bb score is 0.0
+zero_num: 240
+-----------------
+Now testing 2697.png
+bb score is 0.5
+-----------------
+Now testing 2698.png
+bb score is 0.0
+zero_num: 241
+-----------------
+Now testing 27.png
+bb score is 1.0
+-----------------
+Now testing 2701.png
+bb score is 0.0
+zero_num: 242
+-----------------
+Now testing 2728.png
+bb score is 0.0
+zero_num: 243
+-----------------
+Now testing 2730.png
+bb score is 0.0
+zero_num: 244
+-----------------
+Now testing 2756.png
+bb score is 0.0
+zero_num: 245
+-----------------
+Now testing 2762.png
+bb score is 0.25
+-----------------
+Now testing 2764.png
+bb score is 1.0
+-----------------
+Now testing 2765.png
+bb score is 0.0
+zero_num: 246
+-----------------
+Now testing 2773.png
+bb score is 0.0
+zero_num: 247
+-----------------
+Now testing 278.png
+bb score is 1.0
+-----------------
+Now testing 2790.png
+bb score is 0.0
+zero_num: 248
+-----------------
+Now testing 2799.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 2803.png
+bb score is 0.0
+zero_num: 249
+-----------------
+Now testing 2804.png
+bb score is 0.75
+-----------------
+Now testing 2812.png
+bb score is 0.0
+zero_num: 250
+-----------------
+Now testing 2822.png
+bb score is 0.0
+zero_num: 251
+-----------------
+Now testing 283.png
+bb score is 0.0
+zero_num: 252
+-----------------
+Now testing 2831.png
+bb score is 0.0
+zero_num: 253
+-----------------
+Now testing 2841.png
+bb score is 0.0
+zero_num: 254
+-----------------
+Now testing 2847.png
+bb score is 0.0
+zero_num: 255
+-----------------
+Now testing 2855.png
+bb score is 0.0
+zero_num: 256
+-----------------
+Now testing 2860.png
+bb score is 0.0
+zero_num: 257
+-----------------
+Now testing 2870.png
+bb score is 1.0
+-----------------
+Now testing 2871.png
+bb score is 0.0
+zero_num: 258
+-----------------
+Now testing 2873.png
+bb score is 0.0
+zero_num: 259
+-----------------
+Now testing 2878.png
+bb score is 0.0
+zero_num: 260
+-----------------
+Now testing 2880.png
+bb score is 0.0
+zero_num: 261
+-----------------
+Now testing 2888.png
+bb score is 0.5
+-----------------
+Now testing 2900.png
+bb score is 0.5
+-----------------
+Now testing 2904.png
+bb score is 0.0
+zero_num: 262
+-----------------
+Now testing 2909.png
+bb score is 0.0
+zero_num: 263
+-----------------
+Now testing 291.png
+bb score is 0.0
+zero_num: 264
+-----------------
+Now testing 2911.png
+bb score is 0.75
+-----------------
+Now testing 2920.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 2925.png
+bb score is 1.0
+-----------------
+Now testing 2933.png
+bb score is 0.0
+zero_num: 265
+-----------------
+Now testing 2934.png
+bb score is 1.0
+-----------------
+Now testing 2937.png
+bb score is 0.0
+zero_num: 266
+-----------------
+Now testing 2940.png
+bb score is 1.0
+-----------------
+Now testing 2941.png
+bb score is 0.0
+zero_num: 267
+-----------------
+Now testing 2950.png
+bb score is 0.0
+zero_num: 268
+-----------------
+Now testing 2954.png
+bb score is 0.0
+zero_num: 269
+-----------------
+Now testing 296.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 2960.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 2968.png
+bb score is 0.5
+-----------------
+Now testing 2972.png
+bb score is 0.0
+zero_num: 270
+-----------------
+Now testing 2974.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 2979.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 2980.png
+bb score is 0.0
+zero_num: 271
+-----------------
+Now testing 2981.png
+bb score is 0.6666666666666667
+-----------------
+Now testing 2982.png
+bb score is 0.0
+zero_num: 272
+-----------------
+Now testing 2988.png
+bb score is 0.5
+-----------------
+Now testing 2990.png
+bb score is 0.5
+-----------------
+Now testing 2993.png
+bb score is 0.1428571428571429
+-----------------
+Now testing 2997.png
+bb score is 0.0
+zero_num: 273
+-----------------
+Now testing 3002.png
+bb score is 0.0
+zero_num: 274
+-----------------
+Now testing 3011.png
+bb score is 0.0
+zero_num: 275
+-----------------
+Now testing 3012.png
+bb score is 0.16666666666666663
+-----------------
+Now testing 3017.png
+bb score is 1.0
+-----------------
+Now testing 3018.png
+bb score is 0.6
+-----------------
+Now testing 3020.png
+bb score is 1.0
+-----------------
+Now testing 3021.png
+bb score is 1.0
+-----------------
+Now testing 3024.png
+bb score is 0.0
+zero_num: 276
+-----------------
+Now testing 303.png
+bb score is 0.0
+zero_num: 277
+-----------------
+Now testing 3043.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 3050.png
+bb score is 0.5
+-----------------
+Now testing 3056.png
+bb score is 1.0
+-----------------
+Now testing 3059.png
+bb score is 0.0
+zero_num: 278
+-----------------
+Now testing 3066.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 3069.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 3073.png
+bb score is 0.5
+-----------------
+Now testing 3077.png
+bb score is 0.0
+zero_num: 279
+-----------------
+Now testing 3080.png
+bb score is 0.0
+zero_num: 280
+-----------------
+Now testing 3086.png
+bb score is 0.0
+zero_num: 281
+-----------------
+Now testing 3088.png
+bb score is 0.0
+zero_num: 282
+-----------------
+Now testing 3090.png
+bb score is 0.75
+-----------------
+Now testing 3099.png
+bb score is 0.0
+zero_num: 283
+-----------------
+Now testing 3102.png
+bb score is 0.6666666666666667
+-----------------
+Now testing 3108.png
+bb score is 0.5
+-----------------
+Now testing 3113.png
+bb score is 0.0
+zero_num: 284
+-----------------
+Now testing 3114.png
+bb score is 0.0
+zero_num: 285
+-----------------
+Now testing 3129.png
+bb score is 0.0
+zero_num: 286
+-----------------
+Now testing 313.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 3136.png
+bb score is 0.0
+zero_num: 287
+-----------------
+Now testing 3140.png
+bb score is 0.0
+zero_num: 288
+-----------------
+Now testing 3151.png
+bb score is 1.0
+-----------------
+Now testing 3154.png
+bb score is 0.25
+-----------------
+Now testing 3156.png
+bb score is 1.0
+-----------------
+Now testing 3159.png
+bb score is 0.5
+-----------------
+Now testing 316.png
+bb score is 0.0
+zero_num: 289
+-----------------
+Now testing 3162.png
+bb score is 0.0
+zero_num: 290
+-----------------
+Now testing 3167.png
+bb score is 0.0
+zero_num: 291
+-----------------
+Now testing 3171.png
+bb score is 0.5
+-----------------
+Now testing 3172.png
+bb score is 0.5
+-----------------
+Now testing 3173.png
+bb score is 0.0
+zero_num: 292
+-----------------
+Now testing 3174.png
+bb score is 0.5
+-----------------
+Now testing 3178.png
+bb score is 0.0
+zero_num: 293
+-----------------
+Now testing 3182.png
+bb score is 0.0
+zero_num: 294
+-----------------
+Now testing 3213.png
+bb score is 0.125
+-----------------
+Now testing 3220.png
+bb score is 0.0
+zero_num: 295
+-----------------
+Now testing 3222.png
+bb score is 0.25
+-----------------
+Now testing 3223.png
+bb score is 1.0
+-----------------
+Now testing 3224.png
+bb score is 1.0
+-----------------
+Now testing 3226.png
+bb score is 0.0
+zero_num: 296
+-----------------
+Now testing 3228.png
+bb score is 0.0
+zero_num: 297
+-----------------
+Now testing 3230.png
+bb score is 0.0
+zero_num: 298
+-----------------
+Now testing 3235.png
+bb score is 0.25
+-----------------
+Now testing 3237.png
+bb score is 0.0
+zero_num: 299
+-----------------
+Now testing 3238.png
+bb score is 0.0
+zero_num: 300
+-----------------
+Now testing 3240.png
+bb score is 0.0
+zero_num: 301
+-----------------
+Now testing 3245.png
+bb score is 0.25
+-----------------
+Now testing 3246.png
+bb score is 0.0
+zero_num: 302
+-----------------
+Now testing 3251.png
+bb score is 0.0
+zero_num: 303
+-----------------
+Now testing 3256.png
+bb score is 0.0
+zero_num: 304
+-----------------
+Now testing 3266.png
+bb score is 0.75
+-----------------
+Now testing 3269.png
+bb score is 0.0
+zero_num: 305
+-----------------
+Now testing 3270.png
+bb score is 0.5
+-----------------
+Now testing 3273.png
+bb score is 0.0
+zero_num: 306
+-----------------
+Now testing 3274.png
+bb score is 0.0
+zero_num: 307
+-----------------
+Now testing 3277.png
+bb score is 0.5
+-----------------
+Now testing 3292.png
+bb score is 1.0
+-----------------
+Now testing 3296.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 330.png
+bb score is 1.0
+-----------------
+Now testing 3304.png
+bb score is 0.0
+zero_num: 308
+-----------------
+Now testing 3310.png
+bb score is 0.0
+zero_num: 309
+-----------------
+Now testing 3316.png
+bb score is 0.0
+zero_num: 310
+-----------------
+Now testing 3318.png
+bb score is 0.0
+zero_num: 311
+-----------------
+Now testing 3324.png
+bb score is 0.0
+zero_num: 312
+-----------------
+Now testing 3331.png
+bb score is 0.5
+-----------------
+Now testing 3344.png
+bb score is 0.0
+zero_num: 313
+-----------------
+Now testing 3348.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 3354.png
+bb score is 0.5
+-----------------
+Now testing 3355.png
+bb score is 0.0
+zero_num: 314
+-----------------
+Now testing 3363.png
+bb score is 0.0
+zero_num: 315
+-----------------
+Now testing 3369.png
+bb score is 0.0
+zero_num: 316
+-----------------
+Now testing 337.png
+bb score is 0.0
+zero_num: 317
+-----------------
+Now testing 3379.png
+bb score is 0.6666666666666667
+-----------------
+Now testing 3381.png
+bb score is 0.0
+zero_num: 318
+-----------------
+Now testing 3382.png
+bb score is 0.0
+zero_num: 319
+-----------------
+Now testing 3385.png
+bb score is 0.0
+zero_num: 320
+-----------------
+Now testing 3386.png
+bb score is 0.0
+zero_num: 321
+-----------------
+Now testing 3395.png
+bb score is 0.0
+zero_num: 322
+-----------------
+Now testing 3399.png
+bb score is 0.5
+-----------------
+Now testing 3401.png
+bb score is 0.0
+zero_num: 323
+-----------------
+Now testing 3402.png
+bb score is 0.0
+zero_num: 324
+-----------------
+Now testing 3403.png
+bb score is 0.0
+zero_num: 325
+-----------------
+Now testing 3409.png
+bb score is 0.0
+zero_num: 326
+-----------------
+Now testing 3411.png
+bb score is 0.0
+zero_num: 327
+-----------------
+Now testing 342.png
+bb score is 0.0
+zero_num: 328
+-----------------
+Now testing 3425.png
+bb score is 0.0
+zero_num: 329
+-----------------
+Now testing 3443.png
+bb score is 0.0
+zero_num: 330
+-----------------
+Now testing 3448.png
+bb score is 0.0
+zero_num: 331
+-----------------
+Now testing 3453.png
+bb score is 0.0
+zero_num: 332
+-----------------
+Now testing 3457.png
+bb score is 0.0
+zero_num: 333
+-----------------
+Now testing 3459.png
+bb score is 0.0
+zero_num: 334
+-----------------
+Now testing 3467.png
+bb score is 0.0
+zero_num: 335
+-----------------
+Now testing 3470.png
+bb score is 0.75
+-----------------
+Now testing 3478.png
+bb score is 0.0
+zero_num: 336
+-----------------
+Now testing 3489.png
+bb score is 0.0
+zero_num: 337
+-----------------
+Now testing 3490.png
+bb score is 0.0
+zero_num: 338
+-----------------
+Now testing 3492.png
+bb score is 0.5
+-----------------
+Now testing 3493.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 3496.png
+bb score is 0.0
+zero_num: 339
+-----------------
+Now testing 35.png
+bb score is 0.5
+-----------------
+Now testing 3504.png
+bb score is 0.0
+zero_num: 340
+-----------------
+Now testing 3507.png
+bb score is 0.0
+zero_num: 341
+-----------------
+Now testing 3513.png
+bb score is 1.0
+-----------------
+Now testing 3514.png
+bb score is 0.0
+zero_num: 342
+-----------------
+Now testing 3518.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 352.png
+bb score is 0.0
+zero_num: 343
+-----------------
+Now testing 3525.png
+bb score is 0.0
+zero_num: 344
+-----------------
+Now testing 3538.png
+bb score is 0.0
+zero_num: 345
+-----------------
+Now testing 3541.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 3551.png
+bb score is 0.0
+zero_num: 346
+-----------------
+Now testing 3552.png
+bb score is 0.0
+zero_num: 347
+-----------------
+Now testing 3553.png
+bb score is 0.5
+-----------------
+Now testing 3554.png
+bb score is 0.0
+zero_num: 348
+-----------------
+Now testing 3559.png
+bb score is 0.0
+zero_num: 349
+-----------------
+Now testing 3563.png
+bb score is 0.0
+zero_num: 350
+-----------------
+Now testing 3572.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 3579.png
+bb score is 0.0
+zero_num: 351
+-----------------
+Now testing 358.png
+bb score is 0.0
+zero_num: 352
+-----------------
+Now testing 3581.png
+bb score is 0.0
+zero_num: 353
+-----------------
+Now testing 3582.png
+bb score is 0.0
+zero_num: 354
+-----------------
+Now testing 3600.png
+bb score is 0.25
+-----------------
+Now testing 3601.png
+bb score is 0.0
+zero_num: 355
+-----------------
+Now testing 3611.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 362.png
+bb score is 1.0
+-----------------
+Now testing 3621.png
+bb score is 1.0
+-----------------
+Now testing 3625.png
+bb score is 0.0
+zero_num: 356
+-----------------
+Now testing 3634.png
+bb score is 0.0
+zero_num: 357
+-----------------
+Now testing 3638.png
+bb score is 0.5
+-----------------
+Now testing 3641.png
+bb score is 0.0
+zero_num: 358
+-----------------
+Now testing 3650.png
+bb score is 0.0
+zero_num: 359
+-----------------
+Now testing 3653.png
+bb score is 0.0
+zero_num: 360
+-----------------
+Now testing 3662.png
+bb score is 1.0
+-----------------
+Now testing 3663.png
+bb score is 0.0
+zero_num: 361
+-----------------
+Now testing 3667.png
+bb score is 0.5
+-----------------
+Now testing 3671.png
+bb score is 0.5
+-----------------
+Now testing 3673.png
+bb score is 0.0
+zero_num: 362
+-----------------
+Now testing 3676.png
+bb score is 0.5
+-----------------
+Now testing 3678.png
+bb score is 0.6666666666666667
+-----------------
+Now testing 3679.png
+bb score is 0.0
+zero_num: 363
+-----------------
+Now testing 3681.png
+bb score is 0.0
+zero_num: 364
+-----------------
+Now testing 3683.png
+bb score is 0.0
+zero_num: 365
+-----------------
+Now testing 3695.png
+bb score is 0.0
+zero_num: 366
+-----------------
+Now testing 37.png
+bb score is 0.0
+zero_num: 367
+-----------------
+Now testing 370.png
+bb score is 0.0
+zero_num: 368
+-----------------
+Now testing 3710.png
+bb score is 0.0
+zero_num: 369
+-----------------
+Now testing 3717.png
+bb score is 0.0
+zero_num: 370
+-----------------
+Now testing 3719.png
+bb score is 0.0
+zero_num: 371
+-----------------
+Now testing 3729.png
+bb score is 0.0
+zero_num: 372
+-----------------
+Now testing 3736.png
+bb score is 0.0
+zero_num: 373
+-----------------
+Now testing 3740.png
+bb score is 0.5
+-----------------
+Now testing 3745.png
+bb score is 0.6666666666666667
+-----------------
+Now testing 3748.png
+bb score is 0.0
+zero_num: 374
+-----------------
+Now testing 375.png
+bb score is 0.5
+-----------------
+Now testing 3757.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 3761.png
+bb score is 0.5
+-----------------
+Now testing 3770.png
+bb score is 0.5
+-----------------
+Now testing 3773.png
+bb score is 0.0
+zero_num: 375
+-----------------
+Now testing 3777.png
+bb score is 0.0
+zero_num: 376
+-----------------
+Now testing 3781.png
+bb score is 0.0
+zero_num: 377
+-----------------
+Now testing 3788.png
+bb score is 0.0
+zero_num: 378
+-----------------
+Now testing 3789.png
+bb score is 0.0
+zero_num: 379
+-----------------
+Now testing 3795.png
+bb score is 0.0
+zero_num: 380
+-----------------
+Now testing 380.png
+bb score is 0.0
+zero_num: 381
+-----------------
+Now testing 3801.png
+bb score is 0.0
+zero_num: 382
+-----------------
+Now testing 3803.png
+bb score is 0.25
+-----------------
+Now testing 3809.png
+bb score is 0.0
+zero_num: 383
+-----------------
+Now testing 3811.png
+bb score is 0.0
+zero_num: 384
+-----------------
+Now testing 3812.png
+bb score is 0.0
+zero_num: 385
+-----------------
+Now testing 3819.png
+bb score is 0.0
+zero_num: 386
+-----------------
+Now testing 382.png
+bb score is 0.0
+zero_num: 387
+-----------------
+Now testing 3823.png
+bb score is 0.0
+zero_num: 388
+-----------------
+Now testing 3825.png
+bb score is 1.0
+-----------------
+Now testing 3835.png
+bb score is 0.0
+zero_num: 389
+-----------------
+Now testing 3837.png
+bb score is 0.0
+zero_num: 390
+-----------------
+Now testing 3850.png
+bb score is 0.0
+zero_num: 391
+-----------------
+Now testing 3851.png
+bb score is 0.0
+zero_num: 392
+-----------------
+Now testing 3852.png
+bb score is 0.0
+zero_num: 393
+-----------------
+Now testing 3853.png
+bb score is 1.0
+-----------------
+Now testing 3854.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 3856.png
+bb score is 0.0
+zero_num: 394
+-----------------
+Now testing 386.png
+bb score is 0.5
+-----------------
+Now testing 3868.png
+bb score is 0.25
+-----------------
+Now testing 3870.png
+bb score is 0.0
+zero_num: 395
+-----------------
+Now testing 3871.png
+bb score is 0.0
+zero_num: 396
+-----------------
+Now testing 3873.png
+bb score is 0.25
+-----------------
+Now testing 3874.png
+bb score is 0.5
+-----------------
+Now testing 3876.png
+bb score is 0.0
+zero_num: 397
+-----------------
+Now testing 3877.png
+bb score is 0.0
+zero_num: 398
+-----------------
+Now testing 3879.png
+bb score is 0.0
+zero_num: 399
+-----------------
+Now testing 3884.png
+bb score is 0.0
+zero_num: 400
+-----------------
+Now testing 3898.png
+bb score is 0.0
+zero_num: 401
+-----------------
+Now testing 3900.png
+bb score is 1.0
+-----------------
+Now testing 3901.png
+bb score is 0.0
+zero_num: 402
+-----------------
+Now testing 3903.png
+bb score is 0.0
+zero_num: 403
+-----------------
+Now testing 3905.png
+bb score is 0.0
+zero_num: 404
+-----------------
+Now testing 3911.png
+bb score is 0.0
+zero_num: 405
+-----------------
+Now testing 3914.png
+bb score is 0.0
+zero_num: 406
+-----------------
+Now testing 3916.png
+bb score is 0.0
+zero_num: 407
+-----------------
+Now testing 392.png
+bb score is 0.5
+-----------------
+Now testing 3926.png
+bb score is 0.0
+zero_num: 408
+-----------------
+Now testing 3927.png
+bb score is 0.0
+zero_num: 409
+-----------------
+Now testing 393.png
+bb score is 1.0
+-----------------
+Now testing 3934.png
+bb score is 0.0
+zero_num: 410
+-----------------
+Now testing 394.png
+bb score is 0.5
+-----------------
+Now testing 3940.png
+bb score is 0.0
+zero_num: 411
+-----------------
+Now testing 3957.png
+bb score is 0.0
+zero_num: 412
+-----------------
+Now testing 3960.png
+bb score is 0.0
+zero_num: 413
+-----------------
+Now testing 3964.png
+bb score is 0.0
+zero_num: 414
+-----------------
+Now testing 3967.png
+bb score is 0.0
+zero_num: 415
+-----------------
+Now testing 3970.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 3971.png
+bb score is 0.0
+zero_num: 416
+-----------------
+Now testing 3978.png
+bb score is 1.0
+-----------------
+Now testing 3984.png
+bb score is 0.0
+zero_num: 417
+-----------------
+Now testing 3989.png
+bb score is 0.0
+zero_num: 418
+-----------------
+Now testing 3995.png
+bb score is 0.5
+-----------------
+Now testing 3998.png
+bb score is 0.0
+zero_num: 419
+-----------------
+Now testing 401.png
+bb score is 0.0
+zero_num: 420
+-----------------
+Now testing 4015.png
+bb score is 0.0
+zero_num: 421
+-----------------
+Now testing 4016.png
+bb score is 0.5
+-----------------
+Now testing 4028.png
+bb score is 1.0
+-----------------
+Now testing 4032.png
+bb score is 0.0
+zero_num: 422
+-----------------
+Now testing 4043.png
+bb score is 0.0
+zero_num: 423
+-----------------
+Now testing 4050.png
+bb score is 0.5
+-----------------
+Now testing 4053.png
+bb score is 0.0
+zero_num: 424
+-----------------
+Now testing 4062.png
+bb score is 0.0
+zero_num: 425
+-----------------
+Now testing 4068.png
+bb score is 0.0
+zero_num: 426
+-----------------
+Now testing 407.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 4083.png
+bb score is 1.0
+-----------------
+Now testing 4099.png
+bb score is 0.0
+zero_num: 427
+-----------------
+Now testing 410.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 4102.png
+bb score is 0.0
+zero_num: 428
+-----------------
+Now testing 4108.png
+bb score is 0.0
+zero_num: 429
+-----------------
+Now testing 4114.png
+bb score is 0.0
+zero_num: 430
+-----------------
+Now testing 412.png
+bb score is 0.0
+zero_num: 431
+-----------------
+Now testing 4120.png
+bb score is 0.5
+-----------------
+Now testing 4127.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 4132.png
+bb score is 0.5
+-----------------
+Now testing 4142.png
+bb score is 0.0
+zero_num: 432
+-----------------
+Now testing 4144.png
+bb score is 0.5
+-----------------
+Now testing 4152.png
+bb score is 0.0
+zero_num: 433
+-----------------
+Now testing 4163.png
+bb score is 0.5
+-----------------
+Now testing 4164.png
+bb score is 0.0
+zero_num: 434
+-----------------
+Now testing 4174.png
+bb score is 0.0
+zero_num: 435
+-----------------
+Now testing 4178.png
+bb score is 0.0
+zero_num: 436
+-----------------
+Now testing 4181.png
+bb score is 0.5
+-----------------
+Now testing 4189.png
+bb score is 0.0
+zero_num: 437
+-----------------
+Now testing 4190.png
+bb score is 0.0
+zero_num: 438
+-----------------
+Now testing 4192.png
+bb score is 1.0
+-----------------
+Now testing 42.png
+bb score is 1.0
+-----------------
+Now testing 420.png
+bb score is 0.0
+zero_num: 439
+-----------------
+Now testing 4200.png
+bb score is 0.2857142857142857
+-----------------
+Now testing 4213.png
+bb score is 0.6666666666666667
+-----------------
+Now testing 4214.png
+bb score is 0.5
+-----------------
+Now testing 4219.png
+bb score is 0.0
+zero_num: 440
+-----------------
+Now testing 4222.png
+bb score is 0.5
+-----------------
+Now testing 4225.png
+bb score is 0.6666666666666667
+-----------------
+Now testing 4229.png
+bb score is 0.25
+-----------------
+Now testing 4233.png
+bb score is 0.0
+zero_num: 441
+-----------------
+Now testing 4234.png
+bb score is 0.0
+zero_num: 442
+-----------------
+Now testing 4236.png
+bb score is 0.0
+zero_num: 443
+-----------------
+Now testing 4244.png
+bb score is 1.0
+-----------------
+Now testing 4245.png
+bb score is 0.0
+zero_num: 444
+-----------------
+Now testing 4248.png
+bb score is 0.0
+zero_num: 445
+-----------------
+Now testing 4260.png
+bb score is 1.0
+-----------------
+Now testing 4273.png
+bb score is 0.0
+zero_num: 446
+-----------------
+Now testing 428.png
+bb score is 0.0
+zero_num: 447
+-----------------
+Now testing 4292.png
+bb score is 0.0
+zero_num: 448
+-----------------
+Now testing 4298.png
+bb score is 1.0
+-----------------
+Now testing 4300.png
+bb score is 0.0
+zero_num: 449
+-----------------
+Now testing 4304.png
+bb score is 0.0
+zero_num: 450
+-----------------
+Now testing 4309.png
+bb score is 0.6666666666666667
+-----------------
+Now testing 431.png
+bb score is 0.0
+zero_num: 451
+-----------------
+Now testing 4319.png
+bb score is 0.19999999999999996
+-----------------
+Now testing 4323.png
+bb score is 0.0
+zero_num: 452
+-----------------
+Now testing 4326.png
+bb score is 0.5
+-----------------
+Now testing 4329.png
+bb score is 0.0
+zero_num: 453
+-----------------
+Now testing 4331.png
+bb score is 0.5
+-----------------
+Now testing 4335.png
+bb score is 0.4
+-----------------
+Now testing 434.png
+bb score is 0.16666666666666663
+-----------------
+Now testing 4340.png
+bb score is 0.5
+-----------------
+Now testing 4342.png
+bb score is 0.0
+zero_num: 454
+-----------------
+Now testing 4345.png
+bb score is 0.0
+zero_num: 455
+-----------------
+Now testing 4346.png
+bb score is 0.0
+zero_num: 456
+-----------------
+Now testing 4350.png
+bb score is 0.25
+-----------------
+Now testing 4355.png
+bb score is 0.5
+-----------------
+Now testing 4359.png
+bb score is 0.0
+zero_num: 457
+-----------------
+Now testing 4361.png
+bb score is 1.0
+-----------------
+Now testing 4369.png
+bb score is 0.0
+zero_num: 458
+-----------------
+Now testing 4384.png
+bb score is 0.0
+zero_num: 459
+-----------------
+Now testing 4389.png
+bb score is 0.5
+-----------------
+Now testing 4390.png
+bb score is 0.0
+zero_num: 460
+-----------------
+Now testing 4392.png
+bb score is 0.19999999999999996
+-----------------
+Now testing 4397.png
+bb score is 0.0
+zero_num: 461
+-----------------
+Now testing 4399.png
+bb score is 1.0
+-----------------
+Now testing 4400.png
+bb score is 0.5
+-----------------
+Now testing 4412.png
+bb score is 0.0
+zero_num: 462
+-----------------
+Now testing 4414.png
+bb score is 1.0
+-----------------
+Now testing 4443.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 4454.png
+bb score is 0.0
+zero_num: 463
+-----------------
+Now testing 4458.png
+bb score is 0.6666666666666667
+-----------------
+Now testing 4462.png
+bb score is 0.5
+-----------------
+Now testing 4467.png
+bb score is 0.0
+zero_num: 464
+-----------------
+Now testing 4470.png
+bb score is 0.5
+-----------------
+Now testing 4473.png
+bb score is 1.0
+-----------------
+Now testing 4474.png
+bb score is 0.0
+zero_num: 465
+-----------------
+Now testing 4476.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 4493.png
+bb score is 0.0
+zero_num: 466
+-----------------
+Now testing 4494.png
+bb score is 0.25
+-----------------
+Now testing 450.png
+bb score is 0.0
+zero_num: 467
+-----------------
+Now testing 4508.png
+bb score is 0.0
+zero_num: 468
+-----------------
+Now testing 4519.png
+bb score is 0.0
+zero_num: 469
+-----------------
+Now testing 4530.png
+bb score is 0.0
+zero_num: 470
+-----------------
+Now testing 4538.png
+bb score is 0.0
+zero_num: 471
+-----------------
+Now testing 4543.png
+bb score is 0.0
+zero_num: 472
+-----------------
+Now testing 4546.png
+bb score is 0.0
+zero_num: 473
+-----------------
+Now testing 455.png
+bb score is 0.0
+zero_num: 474
+-----------------
+Now testing 4553.png
+bb score is 0.0
+zero_num: 475
+-----------------
+Now testing 4554.png
+bb score is 0.0
+zero_num: 476
+-----------------
+Now testing 4566.png
+bb score is 0.0
+zero_num: 477
+-----------------
+Now testing 4584.png
+bb score is 0.0
+zero_num: 478
+-----------------
+Now testing 4585.png
+bb score is 0.0
+zero_num: 479
+-----------------
+Now testing 46.png
+bb score is 0.0
+zero_num: 480
+-----------------
+Now testing 4606.png
+bb score is 0.5
+-----------------
+Now testing 4610.png
+bb score is 0.0
+zero_num: 481
+-----------------
+Now testing 4611.png
+bb score is 0.0
+zero_num: 482
+-----------------
+Now testing 4616.png
+bb score is 0.0
+zero_num: 483
+-----------------
+Now testing 4620.png
+bb score is 0.0
+zero_num: 484
+-----------------
+Now testing 4621.png
+bb score is 0.6666666666666667
+-----------------
+Now testing 4628.png
+bb score is 0.0
+zero_num: 485
+-----------------
+Now testing 4632.png
+bb score is 0.0
+zero_num: 486
+-----------------
+Now testing 4633.png
+bb score is 0.0
+zero_num: 487
+-----------------
+Now testing 4650.png
+bb score is 0.0
+zero_num: 488
+-----------------
+Now testing 4655.png
+bb score is 0.5
+-----------------
+Now testing 4675.png
+bb score is 0.25
+-----------------
+Now testing 468.png
+bb score is 0.6666666666666667
+-----------------
+Now testing 4683.png
+bb score is 0.0
+zero_num: 489
+-----------------
+Now testing 4687.png
+bb score is 0.0
+zero_num: 490
+-----------------
+Now testing 4692.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 4698.png
+bb score is 0.0
+zero_num: 491
+-----------------
+Now testing 47.png
+bb score is 0.0
+zero_num: 492
+-----------------
+Now testing 470.png
+bb score is 0.0
+zero_num: 493
+-----------------
+Now testing 4702.png
+bb score is 0.5
+-----------------
+Now testing 4706.png
+bb score is 0.0
+zero_num: 494
+-----------------
+Now testing 471.png
+bb score is 0.0
+zero_num: 495
+-----------------
+Now testing 4711.png
+bb score is 1.0
+-----------------
+Now testing 4713.png
+bb score is 0.0
+zero_num: 496
+-----------------
+Now testing 4725.png
+bb score is 1.0
+-----------------
+Now testing 4728.png
+bb score is 1.0
+-----------------
+Now testing 4737.png
+bb score is 0.0
+zero_num: 497
+-----------------
+Now testing 4744.png
+bb score is 0.19999999999999996
+-----------------
+Now testing 4745.png
+bb score is 0.16666666666666663
+-----------------
+Now testing 4748.png
+bb score is 0.5
+-----------------
+Now testing 4760.png
+bb score is 1.0
+-----------------
+Now testing 4765.png
+bb score is 1.0
+-----------------
+Now testing 4766.png
+bb score is 0.0
+zero_num: 498
+-----------------
+Now testing 4771.png
+bb score is 0.5
+-----------------
+Now testing 4784.png
+bb score is 0.16666666666666663
+-----------------
+Now testing 4791.png
+bb score is 0.0
+zero_num: 499
+-----------------
+Now testing 4798.png
+bb score is 1.0
+-----------------
+Now testing 48.png
+bb score is 0.5
+-----------------
+Now testing 480.png
+bb score is 0.5
+-----------------
+Now testing 4803.png
+bb score is 0.0
+zero_num: 500
+-----------------
+Now testing 4805.png
+bb score is 0.5
+-----------------
+Now testing 4816.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 482.png
+bb score is 0.5
+-----------------
+Now testing 4822.png
+bb score is 1.0
+-----------------
+Now testing 4824.png
+bb score is 1.0
+-----------------
+Now testing 4832.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 4835.png
+bb score is 0.0
+zero_num: 501
+-----------------
+Now testing 4850.png
+bb score is 0.0
+zero_num: 502
+-----------------
+Now testing 4851.png
+bb score is 0.0
+zero_num: 503
+-----------------
+Now testing 4854.png
+bb score is 0.0
+zero_num: 504
+-----------------
+Now testing 4861.png
+bb score is 0.0
+zero_num: 505
+-----------------
+Now testing 4862.png
+bb score is 0.0
+zero_num: 506
+-----------------
+Now testing 4867.png
+bb score is 0.0
+zero_num: 507
+-----------------
+Now testing 4868.png
+bb score is 0.0
+zero_num: 508
+-----------------
+Now testing 4869.png
+bb score is 1.0
+-----------------
+Now testing 488.png
+bb score is 1.0
+-----------------
+Now testing 4882.png
+bb score is 0.5
+-----------------
+Now testing 4883.png
+bb score is 0.5
+-----------------
+Now testing 49.png
+bb score is 0.0
+zero_num: 509
+-----------------
+Now testing 4900.png
+bb score is 0.19999999999999996
+-----------------
+Now testing 4903.png
+bb score is 0.0
+zero_num: 510
+-----------------
+Now testing 4913.png
+bb score is 0.0
+zero_num: 511
+-----------------
+Now testing 492.png
+bb score is 0.25
+-----------------
+Now testing 4921.png
+bb score is 1.0
+-----------------
+Now testing 4929.png
+bb score is 1.0
+-----------------
+Now testing 493.png
+bb score is 0.0
+zero_num: 512
+-----------------
+Now testing 4937.png
+bb score is 0.25
+-----------------
+Now testing 494.png
+bb score is 0.1428571428571429
+-----------------
+Now testing 4940.png
+bb score is 0.5
+-----------------
+Now testing 4942.png
+bb score is 0.0
+zero_num: 513
+-----------------
+Now testing 4946.png
+bb score is 0.0
+zero_num: 514
+-----------------
+Now testing 4950.png
+bb score is 0.5
+-----------------
+Now testing 4951.png
+bb score is 0.0
+zero_num: 515
+-----------------
+Now testing 4956.png
+bb score is 0.0
+zero_num: 516
+-----------------
+Now testing 4967.png
+bb score is 0.0
+zero_num: 517
+-----------------
+Now testing 4974.png
+bb score is 0.0
+zero_num: 518
+-----------------
+Now testing 4976.png
+bb score is 0.0
+zero_num: 519
+-----------------
+Now testing 4979.png
+bb score is 0.0
+zero_num: 520
+-----------------
+Now testing 4980.png
+bb score is 0.0
+zero_num: 521
+-----------------
+Now testing 4984.png
+bb score is 0.0
+zero_num: 522
+-----------------
+Now testing 4985.png
+bb score is 0.5
+-----------------
+Now testing 4992.png
+bb score is 0.0
+zero_num: 523
+-----------------
+Now testing 4996.png
+bb score is 0.0
+zero_num: 524
+-----------------
+Now testing 4998.png
+bb score is 0.0
+zero_num: 525
+-----------------
+Now testing 510.png
+bb score is 0.0
+zero_num: 526
+-----------------
+Now testing 511.png
+bb score is 0.0
+zero_num: 527
+-----------------
+Now testing 522.png
+bb score is 0.0
+zero_num: 528
+-----------------
+Now testing 528.png
+bb score is 0.0
+zero_num: 529
+-----------------
+Now testing 532.png
+bb score is 0.5
+-----------------
+Now testing 536.png
+bb score is 0.0
+zero_num: 530
+-----------------
+Now testing 541.png
+bb score is 0.0
+zero_num: 531
+-----------------
+Now testing 542.png
+bb score is 0.0
+zero_num: 532
+-----------------
+Now testing 550.png
+bb score is 1.0
+-----------------
+Now testing 555.png
+bb score is 0.0
+zero_num: 533
+-----------------
+Now testing 559.png
+bb score is 0.5
+-----------------
+Now testing 56.png
+bb score is 0.0
+zero_num: 534
+-----------------
+Now testing 560.png
+bb score is 0.5
+-----------------
+Now testing 561.png
+bb score is 0.0
+zero_num: 535
+-----------------
+Now testing 566.png
+bb score is 0.5
+-----------------
+Now testing 568.png
+bb score is 0.0
+zero_num: 536
+-----------------
+Now testing 570.png
+bb score is 0.25
+-----------------
+Now testing 572.png
+bb score is 0.25
+-----------------
+Now testing 574.png
+bb score is 0.0
+zero_num: 537
+-----------------
+Now testing 584.png
+bb score is 0.0
+zero_num: 538
+-----------------
+Now testing 586.png
+bb score is 0.5
+-----------------
+Now testing 595.png
+bb score is 0.5
+-----------------
+Now testing 598.png
+bb score is 0.0
+zero_num: 539
+-----------------
+Now testing 6.png
+bb score is 0.0
+zero_num: 540
+-----------------
+Now testing 602.png
+bb score is 0.0
+zero_num: 541
+-----------------
+Now testing 607.png
+bb score is 1.0
+-----------------
+Now testing 61.png
+bb score is 0.0
+zero_num: 542
+-----------------
+Now testing 615.png
+bb score is 0.0
+zero_num: 543
+-----------------
+Now testing 617.png
+bb score is 0.0
+zero_num: 544
+-----------------
+Now testing 62.png
+bb score is 0.25
+-----------------
+Now testing 622.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 624.png
+bb score is 0.5
+-----------------
+Now testing 627.png
+bb score is 0.0
+zero_num: 545
+-----------------
+Now testing 632.png
+bb score is 0.0
+zero_num: 546
+-----------------
+Now testing 635.png
+bb score is 0.0
+zero_num: 547
+-----------------
+Now testing 640.png
+bb score is 0.0
+zero_num: 548
+-----------------
+Now testing 644.png
+bb score is 1.0
+-----------------
+Now testing 645.png
+bb score is 0.0
+zero_num: 549
+-----------------
+Now testing 648.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 649.png
+bb score is 0.5
+-----------------
+Now testing 665.png
+bb score is 0.0
+zero_num: 550
+-----------------
+Now testing 672.png
+bb score is 0.0
+zero_num: 551
+-----------------
+Now testing 674.png
+bb score is 0.0
+zero_num: 552
+-----------------
+Now testing 675.png
+bb score is 0.0
+zero_num: 553
+-----------------
+Now testing 676.png
+bb score is 0.0
+zero_num: 554
+-----------------
+Now testing 677.png
+bb score is 0.5
+-----------------
+Now testing 678.png
+bb score is 0.5
+-----------------
+Now testing 681.png
+bb score is 0.5
+-----------------
+Now testing 682.png
+bb score is 0.25
+-----------------
+Now testing 684.png
+bb score is 0.5
+-----------------
+Now testing 688.png
+bb score is 0.0
+zero_num: 555
+-----------------
+Now testing 703.png
+bb score is 0.0
+zero_num: 556
+-----------------
+Now testing 708.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 713.png
+bb score is 0.0
+zero_num: 557
+-----------------
+Now testing 722.png
+bb score is 0.0
+zero_num: 558
+-----------------
+Now testing 723.png
+bb score is 0.0
+zero_num: 559
+-----------------
+Now testing 724.png
+bb score is 0.0
+zero_num: 560
+-----------------
+Now testing 731.png
+bb score is 0.0
+zero_num: 561
+-----------------
+Now testing 735.png
+bb score is 0.5
+-----------------
+Now testing 738.png
+bb score is 0.0
+zero_num: 562
+-----------------
+Now testing 739.png
+bb score is 0.0
+zero_num: 563
+-----------------
+Now testing 748.png
+bb score is 0.5
+-----------------
+Now testing 75.png
+bb score is 0.0
+zero_num: 564
+-----------------
+Now testing 752.png
+bb score is 1.0
+-----------------
+Now testing 755.png
+bb score is 0.5
+-----------------
+Now testing 756.png
+bb score is 1.0
+-----------------
+Now testing 76.png
+bb score is 0.0
+zero_num: 565
+-----------------
+Now testing 769.png
+bb score is 0.5
+-----------------
+Now testing 772.png
+bb score is 0.5
+-----------------
+Now testing 777.png
+bb score is 0.0
+zero_num: 566
+-----------------
+Now testing 778.png
+bb score is 0.0
+zero_num: 567
+-----------------
+Now testing 78.png
+bb score is 0.5
+-----------------
+Now testing 782.png
+bb score is 0.5
+-----------------
+Now testing 785.png
+bb score is 0.0
+zero_num: 568
+-----------------
+Now testing 786.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 793.png
+bb score is 0.0
+zero_num: 569
+-----------------
+Now testing 795.png
+bb score is 0.0
+zero_num: 570
+-----------------
+Now testing 80.png
+bb score is 0.5
+-----------------
+Now testing 800.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 807.png
+bb score is 0.0
+zero_num: 571
+-----------------
+Now testing 81.png
+bb score is 0.0
+zero_num: 572
+-----------------
+Now testing 810.png
+bb score is 0.0
+zero_num: 573
+-----------------
+Now testing 831.png
+bb score is 0.0
+zero_num: 574
+-----------------
+Now testing 835.png
+bb score is 0.0
+zero_num: 575
+-----------------
+Now testing 836.png
+bb score is 0.0
+zero_num: 576
+-----------------
+Now testing 844.png
+bb score is 1.0
+-----------------
+Now testing 847.png
+bb score is 0.33333333333333337
+-----------------
+Now testing 849.png
+bb score is 1.0
+-----------------
+Now testing 85.png
+bb score is 0.5
+-----------------
+Now testing 850.png
+bb score is 0.5
+-----------------
+Now testing 855.png
+bb score is 0.5
+-----------------
+Now testing 859.png
+bb score is 0.0
+zero_num: 577
+-----------------
+Now testing 862.png
+bb score is 0.5
+-----------------
+Now testing 865.png
+bb score is 0.19999999999999996
+-----------------
+Now testing 868.png
+bb score is 0.0
+zero_num: 578
+-----------------
+Now testing 887.png
+bb score is 0.0
+zero_num: 579
+-----------------
+Now testing 889.png
+bb score is 0.0
+zero_num: 580
+-----------------
+Now testing 890.png
+bb score is 1.0
+-----------------
+Now testing 891.png
+bb score is 0.0
+zero_num: 581
+-----------------
+Now testing 894.png
+bb score is 0.0
+zero_num: 582
+-----------------
+Now testing 91.png
+bb score is 0.6666666666666667
+-----------------
+Now testing 911.png
+bb score is 1.0
+-----------------
+Now testing 913.png
+bb score is 0.0
+zero_num: 583
+-----------------
+Now testing 915.png
+bb score is 0.0
+zero_num: 584
+-----------------
+Now testing 921.png
+bb score is 0.6666666666666667
+-----------------
+Now testing 926.png
+bb score is 0.5
+-----------------
+Now testing 929.png
+bb score is 1.0
+-----------------
+Now testing 95.png
+bb score is 0.0
+zero_num: 585
+-----------------
+Now testing 952.png
+bb score is 1.0
+-----------------
+Now testing 959.png
+bb score is 0.0
+zero_num: 586
+-----------------
+Now testing 960.png
+bb score is 0.8333333333333334
+-----------------
+Now testing 974.png
+bb score is 0.0
+zero_num: 587
+-----------------
+Now testing 979.png
+bb score is 0.0
+zero_num: 588
+-----------------
+Now testing 98.png
+bb score is 0.0
+zero_num: 589
+-----------------
+Now testing 981.png
+bb score is 0.0
+zero_num: 590
+-----------------
+Now testing 983.png
+bb score is 0.5
+-----------------
+Now testing 987.png
+bb score is 0.0
+zero_num: 591
+-----------------
+Now testing 991.png
+bb score is 0.0
+zero_num: 592
+total socre is
+
+Process finished with exit code 0

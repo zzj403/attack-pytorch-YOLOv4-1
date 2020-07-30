@@ -1,0 +1,13 @@
+ttest
+*.weights
+*.pth
+
+__pycache__
+.idea
+.vscode
+runs
+
+predictions.jpg
+# Project exclude paths
+/data/
+/inria/
