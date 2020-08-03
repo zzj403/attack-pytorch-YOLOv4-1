@@ -149,11 +149,11 @@ class PatchTrainer(object):
                 boxes = do_detect(self.darknet_model, img_batch_pil, 0.4, 0.4, True)
             print('obj num begin:', len(boxes), float(boxes[0][4]), float(boxes[0][5]), float(boxes[0][6]))
 
-            mask_detected = torch.Tensor(500, 500).fill_(0)
+            mask_detected = torch.Tensor(500, 500).fill_(0).cuda()
             black_img = torch.Tensor(3, 500, 500).fill_(0)
             white_img = torch.Tensor(3, 500, 500).fill_(1)
-            white_img_single_layer = torch.Tensor(500, 500).fill_(1)
-            black_img_single_layer = torch.Tensor(500, 500).fill_(0)
+            white_img_single_layer = torch.Tensor(500, 500).fill_(1).cuda()
+            black_img_single_layer = torch.Tensor(500, 500).fill_(0).cuda()
 
             noise_img = torch.Tensor(3, 500, 500).uniform_(0,1)
             gray_img = torch.Tensor(3, 500, 500).fill_(0.5)
@@ -177,7 +177,7 @@ class PatchTrainer(object):
 
 
                 mask_detected[x1:x2,y1:y2]=1
-            segments_tensor = torch.from_numpy(segments).float()
+            segments_tensor = torch.from_numpy(segments).float().cuda()
 
             old_boxes = boxes.copy()
             old_boxes_tensor = torch.Tensor(old_boxes)
@@ -186,10 +186,10 @@ class PatchTrainer(object):
             # img = transforms.ToPILImage()(img.detach().cpu())
             # img.show()
 
-            segments_cover = torch.where((mask_detected == 1), segments_tensor, torch.FloatTensor(500, 500).fill_(0))
+            segments_cover = torch.where((mask_detected == 1), segments_tensor, torch.FloatTensor(500, 500).fill_(0).cuda())
 
             # segments_cover = mask_detected.cpu()*torch.from_numpy(segments)
-            segments_cover = segments_cover.numpy().astype(int)
+            segments_cover = segments_cover.cpu().numpy().astype(int)
 
             # img = torch.from_numpy(segments_cover).float()  # cpu [3,500,500]
             # img = img/torch.max(img)
@@ -199,6 +199,8 @@ class PatchTrainer(object):
             unique_segments_cover = np.unique(segments_cover)
             unique_segments_cover = unique_segments_cover[1:]
             unique_segments_cover_list = []
+
+            ## area select
             for reg_num_0 in unique_segments_cover:
                 reg_img_0 = torch.where((segments_tensor == reg_num_0).mul(mask_detected == 1),
                                         white_img_single_layer,
@@ -263,7 +265,7 @@ class PatchTrainer(object):
             for reg_num_0 in tqdm(unique_segments_cover):
                 reg_img_0 = torch.where((segments_tensor == reg_num_0).mul(mask_detected == 1), white_img_single_layer,
                                         black_img_single_layer)
-                cv2_dilation_ = cv2.dilate(reg_img_0.numpy(), cv2_kernel, iterations=1)
+                cv2_dilation_ = cv2.dilate(reg_img_0.cpu().numpy(), cv2_kernel, iterations=1)
                 cv2_dilation_ = torch.from_numpy(cv2_dilation_).cuda()
                 # img = reg_img_0  # cpu [500,500]
                 # img = transforms.ToPILImage()(img.detach().cpu())

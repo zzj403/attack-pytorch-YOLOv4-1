@@ -71,10 +71,10 @@ class PatchTrainer(object):
         time_str = time.strftime("%Y%m%d-%H%M%S")
 
         # Generate stating point
-        adv_patch_cpu = self.generate_patch("gray")
+        adv_patch_gpu_500 = self.generate_patch("gray", 500).cuda()
         #adv_patch_cpu = self.read_image("saved_patches/patchnew0.jpg")
 
-        adv_patch_cpu.requires_grad_(True)
+        adv_patch_gpu_500.requires_grad_(True)
 
         # zzj: position set
         patch_position_bias_cpu = torch.full((2, 1), 0)
@@ -87,7 +87,7 @@ class PatchTrainer(object):
         # zzj: optimizer = optim.Adam([adv_patch_cpu, patch_position_bias], lr=self.config.start_learning_rate, amsgrad=True)
 
         optimizer = optim.Adam([
-                                {'params': adv_patch_cpu, 'lr': self.config.start_learning_rate}
+                                {'params': adv_patch_gpu_500, 'lr': self.config.start_learning_rate}
                                ], amsgrad=True)
 
         scheduler = self.config.scheduler_factory(optimizer)
@@ -111,11 +111,11 @@ class PatchTrainer(object):
 
             img_path = os.path.join(img_dir, img_name)
 
-            img_clean = Image.open(img_path).convert('RGB')
-            tf = transforms.Resize((500, 500))
-            img_batch_pil = tf(img_clean)
+            img_clean_pil = Image.open(img_path).convert('RGB')
+            tf = transforms.Resize((608, 608))
+            img_batch_pil_608 = tf(img_clean_pil)
             tf = transforms.ToTensor()
-            img_clean_500 = tf(img_clean)
+            img_clean_500 = tf(img_clean_pil)
 
 
 
@@ -123,7 +123,9 @@ class PatchTrainer(object):
 
             numSegments = 1000
             img_tensor_for_slic_500 = img_clean_500.squeeze().permute(1, 2, 0)
-            segments = slic(img_tensor_for_slic_500, n_segments=numSegments, sigma=3) + 1
+            segments2 = slic(img_tensor_for_slic_500, n_segments=numSegments, sigma=3) + 1
+            np_save_patch = os.path.join('slic_save', img_name.split('.')[0] + '_slic.npy')
+            segments = np.load(np_save_patch)
 
 
 
@@ -133,13 +135,13 @@ class PatchTrainer(object):
             # ax = fig.add_subplot(1, 1, 1)
             # ax.imshow(mark_boundaries(image, segments))
             # img = torch.from_numpy(mark_boundaries(image, segments)).permute(2, 0, 1).float()   # cpu [3,500,500]
-            img = torch.from_numpy(segments).float()  # cpu [3,500,500]
-            img = transforms.ToPILImage()(img.detach().cpu())
-            img.save('seg.png')
+            # img = torch.from_numpy(segments).float()  # cpu [3,500,500]
+            # img = transforms.ToPILImage()(img.detach().cpu())
+            # img.save('seg.png')
 
             seg_result_num = np.max(segments)
             with torch.no_grad():
-                boxes = do_detect(self.darknet_model, img_batch_pil, 0.4, 0.4, True)
+                boxes = do_detect(self.darknet_model, img_batch_pil_608, 0.4, 0.4, True)
             print('obj num begin:', len(boxes), float(boxes[0][4]), float(boxes[0][5]), float(boxes[0][6]))
 
             mask_detected = torch.Tensor(500, 500).fill_(0)
@@ -159,8 +161,6 @@ class PatchTrainer(object):
                 y1 = max(0, min(500, y1))
                 y2 = max(0, min(500, y2))
                 original_box_list.append([int(bx_center), int(by_center)])
-
-
                 mask_detected[x1:x2,y1:y2]=1
             segments_tensor = torch.from_numpy(segments).float()
 
@@ -200,7 +200,7 @@ class PatchTrainer(object):
                 transforms.Resize((608, 608)),
                 transforms.ToTensor()
             ])
-            img_now = img_batch.clone()
+            img_now = img_clean_500.clone()
 
 
             with torch.no_grad():
@@ -330,7 +330,7 @@ class PatchTrainer(object):
                     original_box = original_box_list[i_b]
                     x = original_box[0]
                     y = original_box[1]
-                    selected_node = segments_tensor[y,x]
+                    selected_node = segments_tensor[y, x]
                     select_list.append(int(selected_node))
 
 
@@ -436,7 +436,7 @@ class PatchTrainer(object):
             ## apply init select sp
             sp_layer_now = torch.Tensor(500, 500).fill_(0)
 
-            img_now = img_batch.clone()
+            img_now = img_clean_500.clone()
 
             # select_list = list(select_superpixel)
             # select_list = [586, 661, 661]
@@ -461,8 +461,8 @@ class PatchTrainer(object):
             ## refresh the fgsm image
             img_tmp = torch.where(
                 (sp_layer_now.repeat(3, 1, 1) == 1).mul(mask_detected.repeat(3, 1, 1) == 1),
-                gray_img, img_batch.clone())
-            img_tmp = img_batch.clone()
+                gray_img, img_clean_500.clone())
+            img_tmp = img_clean_500.clone()
             img_tmp = resize_608(img_tmp).cuda().unsqueeze(0)
             img_tmp.requires_grad_(True)
             # boxes = do_detect(self.darknet_model, img_tmp, 0.4, 0.4, True)
@@ -505,7 +505,7 @@ class PatchTrainer(object):
                     mask_detected608 = resize_608(mask_detected)
                     img_tmp = torch.where(
                         (sp_layer_now608.repeat(3, 1, 1) >= 0.1).mul(mask_detected608.repeat(3, 1, 1) >= 0.1),
-                        gray_img608, resize_608(img_batch.clone())).cuda()
+                        gray_img608, resize_608(img_clean_500.clone())).cuda()
                     # img_tmp = resize_608(img_tmp).cuda()
                     boxes = do_detect(self.darknet_model, img_tmp, 0.4, 0.4, True)
                     old_boxes = boxes.copy()
@@ -546,6 +546,7 @@ class PatchTrainer(object):
                     ## iteration with all neighborhood
                     noise_repeat_times = 5
                     score_m_list = []
+                    attack_img_list = []
                     print('number of node need to search is ', now_neighbor_unique_np.size)
                     for i1 in range(now_neighbor_unique_np.size):
                         # if i1 >3:
@@ -576,10 +577,12 @@ class PatchTrainer(object):
 
                         ## measure the attack ability of this new region combined with old region
                         print('--------now node', int(now_node),'---------------')
-                        score_m = measure_region_with_attack(model=self.darknet_model,
-                                                             clean_image=resize_608(img_batch),
-                                                             region=sp_layer_tmp608)
+                        score_m, attack_img = measure_region_with_attack(model=self.darknet_model,
+                                                             clean_image=img_clean_500,
+                                                             region=sp_layer_tmp,
+                                                             max_iteration=400)
                         score_m_list.append(score_m)
+                        attack_img_list.append(attack_img)
 
 
                     print()
@@ -610,6 +613,11 @@ class PatchTrainer(object):
 
                     ## find max of average 3
                     select_superpixel_index = torch.argmin(torch.tensor(score_m_list))
+                    attack_img_save = attack_img_list[select_superpixel_index]
+                    img = attack_img_save
+                    img = transforms.ToPILImage()(img.detach().cpu())
+                    img.save(os.path.join('black_superpixel/train_pixel_attack0803', img_name.split('.')[0] + '.png'))
+
                     select_superpixel_no = now_neighbor_unique_np[select_superpixel_index]
                     select_list.append(select_superpixel_no)
 
@@ -647,18 +655,6 @@ class PatchTrainer(object):
                     img = sp_layer_now
                     img = transforms.ToPILImage()(img.detach().cpu())
                     img.save(os.path.join('black_superpixel/2', img_name.split('.')[0]+'_'+str(step)+'.png'))
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -777,7 +773,7 @@ class PatchTrainer(object):
         lab_batch[0, 0, 3] = 0.43
         lab_batch[0, 0, 4] = 0.76'''
 
-    def generate_patch(self, type):
+    def generate_patch(self, type, width):
         """
         Generate a random patch as a starting point for optimization.
 
@@ -785,9 +781,9 @@ class PatchTrainer(object):
         :return:
         """
         if type == 'gray':
-            adv_patch_cpu = torch.full((3, self.config.patch_size, self.config.patch_size), 0.5)
+            adv_patch_cpu = torch.full((3, width, width), 0.5)
         elif type == 'random':
-            adv_patch_cpu = torch.rand((3, self.config.patch_size, self.config.patch_size))
+            adv_patch_cpu = torch.rand((3, width, width))
         if type == 'trained_patch':
             patchfile = 'patches/object_score.png'
             patch_img = Image.open(patchfile).convert('RGB')

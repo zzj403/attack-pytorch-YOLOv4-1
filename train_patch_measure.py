@@ -35,17 +35,17 @@ csv_name = 'x_result2.csv'
 
 
 
-def measure_region_with_attack(model, clean_image, region):
-    img_batch_608 = clean_image
-    super_pixel_batch_608 = region
+def measure_region_with_attack(model, clean_image, region, max_iteration = 300):
+    clean_image = clean_image.cuda()
+    super_pixel_batch_500 = region.cuda()
 
     ## generate patch
-    adv_patch_cpu_608 = torch.full((3, 608, 608), 0.5)  # gray
-    adv_patch_cpu_608.requires_grad_(True)
+    adv_patch_gpu_500 = torch.full((3, 500, 500), 0.5).cuda()  # gray
+    adv_patch_gpu_500.requires_grad_(True)
 
     # optimizer
     optimizer = optim.Adam([
-        {'params': adv_patch_cpu_608, 'lr': 0.03}
+        {'params': adv_patch_gpu_500, 'lr': 0.03}
     ], amsgrad=True)
 
     scheduler = lambda x: optim.lr_scheduler.ReduceLROnPlateau(x, 'min', patience=50)
@@ -66,10 +66,11 @@ def measure_region_with_attack(model, clean_image, region):
     prob_extractor = MaxProbExtractor(0, 80, 'config').cuda()
     total_variation = TotalVariation().cuda()
 
-    score_recored_tensor = torch.ones(300)
+    score_recored_tensor = torch.ones(max_iteration)
+    patched_img_500_storage = torch.zeros(clean_image.size()).repeat(max_iteration,1,1,1)
     score_recent_queue = Queue(maxsize=10)
     ## rotation start!
-    for i in range(300):
+    for i in range(max_iteration):
 
         ## augment
         # adv_patch_cpu_608 = F.interpolate(adv_patch_cpu.unsqueeze(0),
@@ -77,30 +78,34 @@ def measure_region_with_attack(model, clean_image, region):
         #                                mode='bilinear').squeeze()
         # adv_patch_cpu_batch = adv_patch_cpu_608.repeat(3, 1, 1, 1)
         ## patch apply
-        img_batch = img_batch_608
+
         # img_batch_batch = img_batch.repeat(3, 1, 1, 1)
         # noise = torch.Tensor(img_batch_batch.size()).uniform_(-1, 1) * 0.004
         # img_batch_batch_noised = img_batch_batch + noise
         # adv_patch_cpu_batch_noised = adv_patch_cpu_batch + noise
         # adv_patch_cpu_batch_noised = torch.clamp(adv_patch_cpu_batch_noised, 0.000001, 0.99999)
 
-        patched_img608 = torch.where((super_pixel_batch_608.repeat(3, 1, 1) == 1),
-                                     adv_patch_cpu_608,
-                                     img_batch)
-        patched_img608 = torch.clamp(patched_img608, 0.000001, 0.99999)
+        patched_img_500 = torch.where((super_pixel_batch_500.repeat(3, 1, 1) == 1),
+                                        adv_patch_gpu_500,
+                                        clean_image.cuda())
+        patched_img_500 = torch.clamp(patched_img_500, 0.000001, 0.99999)
+        patched_img_500_storage[i] = patched_img_500
+        patched_img_608 = F.interpolate(patched_img_500.unsqueeze(0),
+                                        (model.height, model.width),
+                                        mode='bilinear').cuda()
 
-        output = model(patched_img608.unsqueeze(0).cuda())
+        output = model(patched_img_608)
         max_prob = prob_extractor(output)
         det_loss = torch.mean(max_prob)
 
-        tv = total_variation(adv_patch_cpu_608.cuda())
-        tv_loss = tv * 2.5
+        # tv = total_variation(adv_patch_cpu_608.cuda())
+        # tv_loss = tv * 2.5
         det_loss = torch.mean(max_prob)
         # loss = det_loss  # + nps_loss + torch.max(tv_loss, torch.tensor(0.1).cuda())
         loss = det_loss #+ torch.max(tv_loss, torch.tensor(0.1).cuda())
 
         # loss = det_loss  # + nps_loss + torch.max(tv_loss, torch.tensor(0.1).cuda())
-        adv_patch_cpu_old = adv_patch_cpu_608.detach().clone()
+        adv_patch_cpu_old = adv_patch_gpu_500.detach().clone()
         loss.backward()
         optimizer.step()
         optimizer.zero_grad()
@@ -123,31 +128,19 @@ def measure_region_with_attack(model, clean_image, region):
                 # img_test = torch.where((super_pixel_batch_608.repeat(3, 1, 1) == 1), adv_patch_cpu_608, img_batch_608)
                 # img_test = img_test.unsqueeze(0)
 
-                img_test = patched_img608.unsqueeze(0)
-
-                # img = patched_img608
-                # imgshow = transforms.ToPILImage()(img.squeeze().detach().cpu())
-                # imgshow.show()
-
-                # img_inter_resize_t = F.interpolate(img_test,
-                #                            (self.darknet_model.height, self.darknet_model.width),
-                #                            mode='bilinear')
-
-                img_test500 = resize_500(img_test.squeeze().cpu())
-
-                resize_small = transforms.Compose([
+                resize_608_p = transforms.Compose([
                     transforms.ToPILImage(),
                     transforms.Resize((608, 608)),
                     # transforms.Resize((608, 608)),
                     # transforms.ToTensor()
                 ])
-                resize_small_t = transforms.Compose([
-                    transforms.ToPILImage(),
-                    transforms.Resize((608, 608)),
-                    transforms.ToTensor()
-                ])
-                img_pil_resize = resize_small(img_test500.squeeze().cpu())
-                img_pil_resize_t = resize_small_t(img_test500.squeeze().cpu()).unsqueeze(0)
+                # resize_608_t = transforms.Compose([
+                #     transforms.ToPILImage(),
+                #     transforms.Resize((608, 608)),
+                #     transforms.ToTensor()
+                # ])
+                # img_pil_resize = resize_608_p(patched_img_500.squeeze().cpu())
+                img_pil_resize_t = resize_608(patched_img_500.squeeze().cpu()).unsqueeze(0)
 
                 # img_pil_resize = resize_small(patched_img608.squeeze().cpu())
                 # img_pil_resize_t = resize_small_t(patched_img608).unsqueeze(0)
@@ -204,7 +197,7 @@ def measure_region_with_attack(model, clean_image, region):
                 if torch.min(score_recent_queue_tensor) > min_score_old:
                     break
                 if torch.max(score_recent_queue_tensor) - torch.min(score_recent_queue_tensor) < 0.01 and\
-                        score_recent_queue_tensor.shape[0]>9:
+                        score_recent_queue_tensor.shape[0] > 9:
                     break
 
 
@@ -212,8 +205,10 @@ def measure_region_with_attack(model, clean_image, region):
                 print('max_prob', float(max_prob))
                 # tf = transforms.ToPILImage()
                 # plot_boxes(transforms.ToPILImage()(img_test), boxes1, 'predictions.jpg', class_names)
-
-    return min_score_old
+    min_score = torch.min(score_recored_tensor)
+    min_score_index = torch.argmin(score_recored_tensor)
+    min_score_img = patched_img_500_storage[min_score_index]
+    return min_score, min_score_img
 
 def patch_aug(input_tensor):
 
