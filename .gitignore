@@ -9,5 +9,5 @@ runs
 
 predictions.jpg
 # Project exclude paths
-/data/
+
 /inria/
