@@ -27,193 +27,7 @@ from skimage.segmentation import slic
 from skimage.util import img_as_float
 from skimage import io
 from skimage.segmentation import mark_boundaries
-from queue import Queue
-
-
-
 csv_name = 'x_result2.csv'
-
-
-
-def measure_region_with_attack(model, clean_image, region):
-    img_batch_608 = clean_image
-    super_pixel_batch_608 = region
-
-    ## generate patch
-    adv_patch_cpu_608 = torch.full((3, 608, 608), 0.5)  # gray
-    adv_patch_cpu_608.requires_grad_(True)
-
-    # optimizer
-    optimizer = optim.Adam([
-        {'params': adv_patch_cpu_608, 'lr': 0.03}
-    ], amsgrad=True)
-
-    scheduler = lambda x: optim.lr_scheduler.ReduceLROnPlateau(x, 'min', patience=50)
-
-    ## img resize
-    resize_500 = transforms.Compose([
-        transforms.ToPILImage(),
-        transforms.Resize((500, 500)),
-        transforms.ToTensor()
-    ])
-
-    resize_608 = transforms.Compose([
-        transforms.ToPILImage(),
-        transforms.Resize((608, 608)),
-        transforms.ToTensor()
-    ])
-
-    prob_extractor = MaxProbExtractor(0, 80, 'config').cuda()
-    total_variation = TotalVariation().cuda()
-
-    score_recored_tensor = torch.ones(300)
-    score_recent_queue = Queue(maxsize=10)
-    ## rotation start!
-    for i in range(300):
-
-        ## augment
-        # adv_patch_cpu_608 = F.interpolate(adv_patch_cpu.unsqueeze(0),
-        #                                (self.darknet_model.height, self.darknet_model.width),
-        #                                mode='bilinear').squeeze()
-        # adv_patch_cpu_batch = adv_patch_cpu_608.repeat(3, 1, 1, 1)
-        ## patch apply
-        img_batch = img_batch_608
-        # img_batch_batch = img_batch.repeat(3, 1, 1, 1)
-        # noise = torch.Tensor(img_batch_batch.size()).uniform_(-1, 1) * 0.004
-        # img_batch_batch_noised = img_batch_batch + noise
-        # adv_patch_cpu_batch_noised = adv_patch_cpu_batch + noise
-        # adv_patch_cpu_batch_noised = torch.clamp(adv_patch_cpu_batch_noised, 0.000001, 0.99999)
-
-        patched_img608 = torch.where((super_pixel_batch_608.repeat(3, 1, 1) == 1),
-                                     adv_patch_cpu_608,
-                                     img_batch)
-        patched_img608 = torch.clamp(patched_img608, 0.000001, 0.99999)
-
-        output = model(patched_img608.unsqueeze(0).cuda())
-        max_prob = prob_extractor(output)
-        det_loss = torch.mean(max_prob)
-
-        tv = total_variation(adv_patch_cpu_608.cuda())
-        tv_loss = tv * 2.5
-        det_loss = torch.mean(max_prob)
-        # loss = det_loss  # + nps_loss + torch.max(tv_loss, torch.tensor(0.1).cuda())
-        loss = det_loss #+ torch.max(tv_loss, torch.tensor(0.1).cuda())
-
-        # loss = det_loss  # + nps_loss + torch.max(tv_loss, torch.tensor(0.1).cuda())
-        adv_patch_cpu_old = adv_patch_cpu_608.detach().clone()
-        loss.backward()
-        optimizer.step()
-        optimizer.zero_grad()
-
-        # noise_tset = torch.rand(10,10)
-        # noise_tset = noise_tset.repeat(3, 1, 1)
-        # resize_small_t = transforms.Compose([
-        #     transforms.ToPILImage(),
-        #     # transforms.Resize((608, 608)),
-        #     transforms.ToTensor()
-        # ])
-        # noise_tset_pil_t = resize_small_t(noise_tset)
-        # noise_tset_pil_t[0,0,0]=0.4862745098
-        # noise_tset_pil_t2 = resize_small_t(noise_tset_pil_t)
-
-        if i % 1 == 0:
-            with torch.no_grad():
-                # print(float(det_loss))
-                # print("lr", optimizer.param_groups[0]["lr"])
-                # img_test = torch.where((super_pixel_batch_608.repeat(3, 1, 1) == 1), adv_patch_cpu_608, img_batch_608)
-                # img_test = img_test.unsqueeze(0)
-
-                img_test = patched_img608.unsqueeze(0)
-
-                # img = patched_img608
-                # imgshow = transforms.ToPILImage()(img.squeeze().detach().cpu())
-                # imgshow.show()
-
-                # img_inter_resize_t = F.interpolate(img_test,
-                #                            (self.darknet_model.height, self.darknet_model.width),
-                #                            mode='bilinear')
-
-                img_test500 = resize_500(img_test.squeeze().cpu())
-
-                resize_small = transforms.Compose([
-                    transforms.ToPILImage(),
-                    transforms.Resize((608, 608)),
-                    # transforms.Resize((608, 608)),
-                    # transforms.ToTensor()
-                ])
-                resize_small_t = transforms.Compose([
-                    transforms.ToPILImage(),
-                    transforms.Resize((608, 608)),
-                    transforms.ToTensor()
-                ])
-                img_pil_resize = resize_small(img_test500.squeeze().cpu())
-                img_pil_resize_t = resize_small_t(img_test500.squeeze().cpu()).unsqueeze(0)
-
-                # img_pil_resize = resize_small(patched_img608.squeeze().cpu())
-                # img_pil_resize_t = resize_small_t(patched_img608).unsqueeze(0)
-
-                #####
-                # img = (patched_img608[0]*255.0).byte()
-                # img = img/255.0
-                # img_pil_resize = img.unsqueeze(0)
-                # img_pil_resize_t = img.unsqueeze(0)
-
-                # width = 608
-                # height = 608
-                # img = torch.ByteTensor(torch.ByteStorage.from_buffer(img.tobytes()))
-                # img = img.view(height, width, 3).transpose(0, 1).transpose(0, 2).contiguous()
-                # img = img.view(1, 3, height, width)
-                # img = img.float().div(255.0)
-
-                # img_pil_resize =
-
-                # img = (img_inter_resize_t - img_pil_resize_t)*1.0
-                # img = img
-                # imgshow = transforms.ToPILImage()(img.squeeze().detach().cpu())
-                # imgshow.show()
-
-                # img_save = (img_test - img_pil_resize_t)[0].float()
-                # img_save = img_save * 10
-                # img = img_save.squeeze()  # cpu [3,500,500]
-                # img = transforms.ToPILImage()(img.detach().cpu())
-                # img.show()
-                # # img.save(img_name)
-                #
-                # img = img_test[0].squeeze()
-                # img = transforms.ToPILImage()(img.detach().cpu())
-                # img.show()
-
-                # boxes1 = do_detect(model, img_pil_resize, 0.5, 0.4, True)
-                # print('box1 num:', len(boxes1))
-                class_names = load_class_names('data/coco.names')
-
-                output = model(img_pil_resize_t.cuda())
-                max_prob = prob_extractor(output)
-
-                if score_recent_queue.full():
-                    _ = score_recent_queue.get()
-
-                score_recent_queue.put(max_prob)
-                score_recent_queue_tensor = torch.tensor(list(score_recent_queue.queue))
-
-
-                min_score_old = torch.min(score_recored_tensor)
-                score_recored_tensor[i] = max_prob
-                min_score_new = torch.min(score_recored_tensor)
-
-                if torch.min(score_recent_queue_tensor) > min_score_old:
-                    break
-                if torch.max(score_recent_queue_tensor) - torch.min(score_recent_queue_tensor) < 0.01 and\
-                        score_recent_queue_tensor.shape[0]>9:
-                    break
-
-
-
-                print('max_prob', float(max_prob))
-                # tf = transforms.ToPILImage()
-                # plot_boxes(transforms.ToPILImage()(img_test), boxes1, 'predictions.jpg', class_names)
-
-    return min_score_old
 
 def patch_aug(input_tensor):
 
@@ -317,7 +131,7 @@ class PatchTrainer(object):
         ####### IMG ########
 
         img_dir = '/disk2/mycode/0511models/pytorch-YOLOv4-master-unofficial/select_from_test_500_0615'
-        super_pixel_dir = '/disk2/mycode/0511models/pytorch-YOLOv4-master-unofficial/black_superpixel'
+        super_pixel_dir = '/disk2/mycode/0511models/pytorch-YOLOv4-master-unofficial/black_superpixel/old/black_superpixel'
         img_list = os.listdir(img_dir)
         img_list.sort()
         black_img = torch.Tensor(3, 608, 608).fill_(0)
@@ -336,20 +150,17 @@ class PatchTrainer(object):
 
             img_batch_pil_500 = Image.open(img_path).convert('RGB')
             super_pixel_batch_pil_500 = Image.open(super_pixel_path)
+
             tf608 = transforms.Compose([
                 transforms.Resize((608, 608)),
                 transforms.ToTensor()
             ])
-            img_batch_608 = tf608(img_batch_pil_500)
-            super_pixel_batch_608 = tf608(super_pixel_batch_pil_500)
-
-            # super_pixel_batch_608 = torch.zeros(608, 608)
-            # super_pixel_batch_608[0:50,0:50] = 1
-
             tf500 = transforms.Compose([
                 transforms.Resize((500, 500)),
                 transforms.ToTensor()
             ])
+            img_batch_608 = tf608(img_batch_pil_500)
+            super_pixel_batch_608 = tf608(super_pixel_batch_pil_500)
 
             super_pixel_batch_500 = tf500(super_pixel_batch_pil_500)
             img_batch_500 = tf500(img_batch_pil_500)
@@ -363,8 +174,8 @@ class PatchTrainer(object):
             # super_pixel_batch = super_pixel_batch_tmp
 
             ## generate patch
-            adv_patch_cpu_608 = self.generate_patch("gray")
-            adv_patch_cpu_608.requires_grad_(True)
+            adv_patch_cpu_500 = self.generate_patch("gray", 500)
+            adv_patch_cpu_500.requires_grad_(True)
 
 
 
@@ -372,7 +183,7 @@ class PatchTrainer(object):
 
             # optimizer
             optimizer = optim.Adam([
-                {'params': adv_patch_cpu_608, 'lr': self.config.start_learning_rate}
+                {'params': adv_patch_cpu_500, 'lr': self.config.start_learning_rate}
             ], amsgrad=True)
 
             scheduler = self.config.scheduler_factory(optimizer)
@@ -391,30 +202,32 @@ class PatchTrainer(object):
                 transforms.ToTensor()
             ])
 
+            best_attack_img = img_batch_500.detach().clone()
+            best_score = 1
             ## rotation start!
-            for i in range(3000):
+            for i in range(300):
 
                 ## augment
                 # adv_patch_cpu_608 = F.interpolate(adv_patch_cpu.unsqueeze(0),
                 #                                (self.darknet_model.height, self.darknet_model.width),
                 #                                mode='bilinear').squeeze()
-                adv_patch_cpu_batch = patch_aug(adv_patch_cpu_608.repeat(3, 1, 1, 1))
-                # adv_patch_cpu_batch = adv_patch_cpu_608.repeat(3, 1, 1, 1)
+                # adv_patch_cpu_batch = patch_aug(adv_patch_cpu_500.repeat(3, 1, 1, 1))
+
                 ## patch apply
-                img_batch = img_batch_608
-                img_batch_batch = img_batch.repeat(3, 1, 1, 1)
-                noise = torch.Tensor(img_batch_batch.size()).uniform_(-1, 1) * 0.004
-                img_batch_batch_noised = img_batch_batch + noise
-                adv_patch_cpu_batch_noised = adv_patch_cpu_batch + noise
-                adv_patch_cpu_batch_noised = torch.clamp(adv_patch_cpu_batch_noised, 0.000001, 0.99999)
-                patched_img608 = torch.where((super_pixel_batch_608.repeat(3, 3, 1, 1) == 1), adv_patch_cpu_batch_noised, img_batch_batch)
+                noise = torch.Tensor(img_batch_500.size()).uniform_(-1, 1) * 0.002
+                adv_patch_cpu_500_noised = adv_patch_cpu_500 + noise
+                adv_patch_cpu_500_noised = torch.clamp(adv_patch_cpu_500_noised, 0.000001, 0.99999)
+                patched_img_500 = torch.where((super_pixel_batch_500.repeat(3, 1, 1) == 1), adv_patch_cpu_500_noised, img_batch_500)
 
-
-                output = self.darknet_model(patched_img608.cuda())
+                ## Feed into YOLO
+                patched_img_608 = F.interpolate(patched_img_500.unsqueeze(0),
+                                           (self.darknet_model.height, self.darknet_model.width),
+                                           mode='bilinear')
+                output = self.darknet_model(patched_img_608.cuda())
                 max_prob = self.prob_extractor(output)
                 det_loss = torch.mean(max_prob)
 
-                tv = self.total_variation(adv_patch_cpu_608.cuda())
+                tv = self.total_variation(adv_patch_cpu_500.cuda())
                 tv_loss = tv * 2.5
                 det_loss = torch.mean(max_prob)
                 # loss = det_loss  # + nps_loss + torch.max(tv_loss, torch.tensor(0.1).cuda())
@@ -422,7 +235,7 @@ class PatchTrainer(object):
 
 
                 # loss = det_loss  # + nps_loss + torch.max(tv_loss, torch.tensor(0.1).cuda())
-                adv_patch_cpu_old = adv_patch_cpu_608.detach().clone()
+                adv_patch_cpu_old = adv_patch_cpu_500.detach().clone()
                 loss.backward()
                 optimizer.step()
                 optimizer.zero_grad()
@@ -442,22 +255,15 @@ class PatchTrainer(object):
 
 
 
-                if i % 20 == 0:
+                if i % 10 == 0:
                     with torch.no_grad():
                         print(float(det_loss))
                         print("lr", optimizer.param_groups[0]["lr"])
                         # img_test = torch.where((super_pixel_batch_608.repeat(3, 1, 1) == 1), adv_patch_cpu_608, img_batch_608)
                         # img_test = img_test.unsqueeze(0)
 
-                        img_test = patched_img608[0].unsqueeze(0)
+                        img_test_500 = patched_img_500
 
-
-                        # img_inter_resize_t = F.interpolate(img_test,
-                        #                            (self.darknet_model.height, self.darknet_model.width),
-                        #                            mode='bilinear')
-
-
-                        img_test500 = resize_500(img_test.squeeze().cpu())
 
                         resize_small = transforms.Compose([
                             transforms.ToPILImage(),
@@ -470,8 +276,8 @@ class PatchTrainer(object):
                             transforms.Resize((608, 608)),
                             transforms.ToTensor()
                         ])
-                        img_pil_resize = resize_small(img_test500.squeeze().cpu())
-                        img_pil_resize_t = resize_small_t(img_test500.squeeze().cpu()).unsqueeze(0)
+                        img_pil_resize_608 = resize_small(img_test_500.cpu())
+                        img_pil_resize_608_t = resize_small_t(img_test_500.cpu()).unsqueeze(0)
 
                         #####
                         # img = (patched_img608[0]*255.0).byte()
@@ -496,7 +302,7 @@ class PatchTrainer(object):
                         # imgshow.show()
 
 
-                        img_save = (img_test - img_pil_resize_t)[0].float()
+                        # img_save = (img_test - img_pil_resize_t)[0].float()
                         # img_save = img_save * 10
                         # img = img_save.squeeze()  # cpu [3,500,500]
                         # img = transforms.ToPILImage()(img.detach().cpu())
@@ -508,15 +314,22 @@ class PatchTrainer(object):
                         # img.show()
 
 
-                        boxes1 = do_detect(self.darknet_model, img_pil_resize, 0.5, 0.4, True)
+                        boxes1 = do_detect(self.darknet_model, img_pil_resize_608, 0.4, 0.4, True)
                         print('box1 num:', len(boxes1))
+
                         class_names = load_class_names('data/coco.names')
 
-                        output = self.darknet_model(img_pil_resize_t.cuda())
+                        output = self.darknet_model(img_pil_resize_608_t.cuda())
                         max_prob = self.prob_extractor(output)
                         print('max_prob', float(max_prob))
-                        tf = transforms.ToPILImage()
+                        if max_prob < best_score:
+                            best_score = max_prob
+                            best_attack_img = img_test_500
+                        # tf = transforms.ToPILImage()
                         # plot_boxes(transforms.ToPILImage()(img_test), boxes1, 'predictions.jpg', class_names)
+                        if max_prob < 0.3:
+                            break
+
                         print()
 
                 '''
@@ -600,28 +413,29 @@ class PatchTrainer(object):
             # adv_patch_cpu = resize_500(adv_patch_cpu)
             # patched_img = torch.where((super_pixel_batch_500.repeat(3, 1, 1) == 1), adv_patch_cpu, img_batch_500)
 
-            adv_patch_cpu_500 = transforms.Compose([
-                transforms.ToPILImage(),
-                transforms.Resize((500, 500)),
-                transforms.ToTensor()
+            adv_patch_cpu_500 = resize_500(best_attack_img)
 
-            ])
-            img_save = torch.where((super_pixel_batch_500.repeat(3, 1, 1) == 1), adv_patch_cpu_500, img_batch_500)
+            # img_save = torch.where((super_pixel_batch_500.repeat(3, 1, 1) == 1), adv_patch_cpu_500, img_batch_500)
+            img_save = best_attack_img
             img = img_save.squeeze()  # cpu [3,500,500]
             img = transforms.ToPILImage()(img.detach().cpu())
-            img.save(os.path.join('train_pixel_attack', img_name))
 
+            img.save(os.path.join('train_pixel_attack', img_name))
             img_path = os.path.join('train_pixel_attack', img_name)
 
             img_batch_pil_500 = Image.open(img_path).convert('RGB')
             resize_small2 = transforms.Compose([
                 # transforms.ToPILImage(),
                 transforms.Resize((608, 608)),
-                # transforms.ToTensor()
+                transforms.ToTensor()
             ])
-            img_batch_pil_608 = resize_small2(img_batch_pil_500)
+            img_batch_pil_608 = tf608(img_batch_pil_500)
             boxes0 = do_detect(self.darknet_model, img_batch_pil_608, 0.5, 0.4, True)
             print('box0 len:', len(boxes0))
+            output = self.darknet_model(img_batch_pil_608.cuda().unsqueeze(0))
+            max_prob = self.prob_extractor(output)
+            print('max_prob', float(max_prob))
+            print()
 
 
 
@@ -630,7 +444,8 @@ class PatchTrainer(object):
 
 
 
-    def generate_patch(self, type):
+
+    def generate_patch(self, type, width):
         """
         Generate a random patch as a starting point for optimization.
 
@@ -638,9 +453,9 @@ class PatchTrainer(object):
         :return:
         """
         if type == 'gray':
-            adv_patch_cpu = torch.full((3, 608, 608), 0.5)
+            adv_patch_cpu = torch.full((3, width, width), 0.5)
         elif type == 'random':
-            adv_patch_cpu = torch.rand((3, 608, 608))
+            adv_patch_cpu = torch.rand((3, width, width))
         if type == 'trained_patch':
             patchfile = 'patches/object_score.png'
             patch_img = Image.open(patchfile).convert('RGB')

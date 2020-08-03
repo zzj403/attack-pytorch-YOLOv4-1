@@ -111,21 +111,19 @@ class PatchTrainer(object):
 
             img_path = os.path.join(img_dir, img_name)
 
-            img_batch = Image.open(img_path).convert('RGB')
-            img_size = 608
-            tf = transforms.Resize((img_size, img_size))
-            img_batch_pil = tf(img_batch)
+            img_clean = Image.open(img_path).convert('RGB')
+            tf = transforms.Resize((500, 500))
+            img_batch_pil = tf(img_clean)
             tf = transforms.ToTensor()
-            img_batch = tf(img_batch)
+            img_clean_500 = tf(img_clean)
 
 
 
             import matplotlib.pyplot as plt
 
-            image = img_as_float(io.imread(img_path))
             numSegments = 1000
-            img_tensor_for_slic = img_batch.squeeze().permute(1, 2, 0)
-            segments = slic(img_tensor_for_slic, n_segments=numSegments, sigma=3) + 1
+            img_tensor_for_slic_500 = img_clean_500.squeeze().permute(1, 2, 0)
+            segments = slic(img_tensor_for_slic_500, n_segments=numSegments, sigma=3) + 1
 
 
 

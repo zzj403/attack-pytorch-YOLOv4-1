@@ -131,7 +131,7 @@ class PatchTrainer(object):
         ####### IMG ########
 
         img_dir = '/disk2/mycode/0511models/pytorch-YOLOv4-master-unofficial/select_from_test_500_0615'
-        super_pixel_dir = '/disk2/mycode/0511models/pytorch-YOLOv4-master-unofficial/black_superpixel/'
+        super_pixel_dir = '/disk2/mycode/0511models/pytorch-YOLOv4-master-unofficial/black_superpixel/old/black_superpixel'
         img_list = os.listdir(img_dir)
         img_list.sort()
         black_img = torch.Tensor(3, 608, 608).fill_(0)
@@ -206,7 +206,7 @@ class PatchTrainer(object):
             ])
 
             ## rotation start!
-            for i in range(3000):
+            for i in range(300):
 
                 ## augment
                 # adv_patch_cpu_608 = F.interpolate(adv_patch_cpu.unsqueeze(0),
@@ -217,7 +217,7 @@ class PatchTrainer(object):
                 ## patch apply
                 img_batch = img_batch_608
                 img_batch_batch = img_batch.repeat(3, 1, 1, 1)
-                noise = torch.Tensor(img_batch_batch.size()).uniform_(-1, 1) * 0.004
+                noise = torch.Tensor(img_batch_batch.size()).uniform_(-1, 1) * 0.002
                 img_batch_batch_noised = img_batch_batch + noise
                 adv_patch_cpu_batch_noised = adv_patch_cpu_batch + noise
                 adv_patch_cpu_batch_noised = torch.clamp(adv_patch_cpu_batch_noised, 0.000001, 0.99999)
@@ -322,8 +322,10 @@ class PatchTrainer(object):
                         # img.show()
 
 
-                        boxes1 = do_detect(self.darknet_model, img_pil_resize, 0.5, 0.4, True)
+                        boxes1 = do_detect(self.darknet_model, img_pil_resize, 0.4, 0.4, True)
                         print('box1 num:', len(boxes1))
+                        if len(boxes1) == 0:
+                            break
                         class_names = load_class_names('data/coco.names')
 
                         output = self.darknet_model(img_pil_resize_t.cuda())
@@ -414,12 +416,8 @@ class PatchTrainer(object):
             # adv_patch_cpu = resize_500(adv_patch_cpu)
             # patched_img = torch.where((super_pixel_batch_500.repeat(3, 1, 1) == 1), adv_patch_cpu, img_batch_500)
 
-            adv_patch_cpu_500 = transforms.Compose([
-                transforms.ToPILImage(),
-                transforms.Resize((500, 500)),
-                transforms.ToTensor()
+            adv_patch_cpu_500 = resize_500(adv_patch_cpu_608)
 
-            ])
             img_save = torch.where((super_pixel_batch_500.repeat(3, 1, 1) == 1), adv_patch_cpu_500, img_batch_500)
             img = img_save.squeeze()  # cpu [3,500,500]
             img = transforms.ToPILImage()(img.detach().cpu())
